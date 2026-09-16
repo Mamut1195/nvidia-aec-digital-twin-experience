@@ -1,0 +1,12 @@
+{
+  "projectId": "urban-construction-demonstrator",
+  "scenarios": [
+    {
+      "scenario": "SevereConvectiveDemo",
+      "rainfallMmH": 100,
+      "windMs": 18,
+      "sourceType": "WORKFLOW DEMO",
+      "explanation": "Illustrative weather input representing the kind of forecast data that can feed downstream engineering workflows. Earth-2 is not running in this browser demo."
+    }
+  ]
+}

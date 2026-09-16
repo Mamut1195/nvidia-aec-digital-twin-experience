@@ -1,0 +1,16 @@
+{
+  "videoId": "site-cam-01-demo",
+  "sourceType": "PRECOMPUTED",
+  "provenance": "Pre-indexed local event dataset. No live Metropolis/VSS analysis is running.",
+  "events": [
+    {
+      "id": "evt-001",
+      "start": 12.4,
+      "end": 24.8,
+      "type": "concrete_delivery",
+      "objects": ["truck"],
+      "summary": "Concrete delivery truck enters the site.",
+      "tags": ["concrete", "delivery", "truck"]
+    }
+  ]
+}

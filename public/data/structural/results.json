@@ -1,0 +1,19 @@
+{
+  "projectId": "urban-construction-demonstrator",
+  "loadCases": [
+    {
+      "loadCase": "gravity",
+      "sourceType": "PRECOMPUTED",
+      "disclaimer": "Illustrative structural-result field — not a design check.",
+      "results": [
+        {
+          "elementId": "STR-COL-L01-C01",
+          "displacement": 0.004,
+          "utilization": 0.42,
+          "axialForce": -1250,
+          "displacementVector": [0, -0.004, 0]
+        }
+      ]
+    }
+  ]
+}

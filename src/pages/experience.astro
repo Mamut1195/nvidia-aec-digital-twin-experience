@@ -1,0 +1,23 @@
+---
+import ExperienceApp from "@/experience/ExperienceApp";
+import "@/styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Independent educational AEC demo. From BIM to Physical AI. Not an official NVIDIA product."
+    />
+    <title>Experience · NVIDIA AEC Digital Twin</title>
+  </head>
+  <body>
+    <ExperienceApp client:only="react">
+      <p slot="fallback" class="px-6 py-10 text-sm text-muted">
+        Loading project world…
+      </p>
+    </ExperienceApp>
+  </body>
+</html>

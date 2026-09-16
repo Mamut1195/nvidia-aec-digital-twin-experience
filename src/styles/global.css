@@ -1,0 +1,71 @@
+@import "@fontsource-variable/ibm-plex-sans";
+@import "@fontsource/ibm-plex-mono/400.css";
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "IBM Plex Sans", "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+
+  --color-canvas: #08090c;
+  --color-surface: #12151c;
+  --color-surface-elevated: #1a1f2a;
+  --color-border: #2a3140;
+  --color-ink: #e8eaef;
+  --color-muted: #9aa3b5;
+  --color-accent: #76b900;
+  --color-interactive: #4aa3e8;
+  --color-precomputed: #d4a017;
+  --color-workflow: #9b7ed9;
+  --color-alert: #e07a3d;
+  --color-water: #3a8fd4;
+
+  --spacing-panel: 1rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+}
+
+:root {
+  color-scheme: dark;
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --panel-width: 18rem;
+  --rail-width: 13.5rem;
+  --header-height: 3.5rem;
+  --footer-height: auto;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings:
+    "tnum" 1,
+    "ss01" 1;
+  letter-spacing: 0.01em;
+}
+
+button,
+select,
+a {
+  font-family: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-interactive);
+  outline-offset: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}

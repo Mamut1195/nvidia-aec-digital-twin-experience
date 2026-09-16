@@ -1,0 +1,38 @@
+---
+import { AppFooter } from "@/components/shell/AppFooter";
+import {
+  INDEPENDENT_DEMO_NOTE,
+  LANDING_LEAD,
+  PHASE_0_NOTE,
+  PRODUCT_NAME,
+  PRODUCT_SUBTITLE,
+} from "@/content/copy";
+import "@/styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={LANDING_LEAD} />
+    <title>{PRODUCT_NAME}</title>
+  </head>
+  <body class="min-h-dvh bg-canvas text-ink">
+    <main class="mx-auto flex min-h-dvh max-w-3xl flex-col justify-between px-6 py-16">
+      <section class="flex flex-col gap-6">
+        <p class="text-xs tracking-[0.2em] text-muted uppercase">{PRODUCT_NAME}</p>
+        <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">{PRODUCT_SUBTITLE}</h1>
+        <p class="max-w-xl text-base leading-relaxed text-muted">{LANDING_LEAD}</p>
+        <p class="max-w-xl text-sm text-muted">{PHASE_0_NOTE}</p>
+        <a
+          class="inline-flex min-h-11 w-fit items-center rounded-md border border-accent/40 bg-accent/15 px-4 text-sm hover:bg-accent/25"
+          href="/experience"
+        >
+          Enter the Digital Twin
+        </a>
+        <p class="text-xs text-muted">{INDEPENDENT_DEMO_NOTE}</p>
+      </section>
+      <AppFooter />
+    </main>
+  </body>
+</html>

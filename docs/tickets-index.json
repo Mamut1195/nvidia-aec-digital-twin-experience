@@ -1,0 +1,322 @@
+[
+  {
+    "id": "AECN-001",
+    "title": "Scaffold static web project",
+    "priority": "P0"
+  },
+  {
+    "id": "AECN-002",
+    "title": "Establish design tokens and app shell",
+    "priority": "P0"
+  },
+  {
+    "id": "AECN-003",
+    "title": "Define typed domain contracts",
+    "priority": "P0"
+  },
+  {
+    "id": "AECN-004",
+    "title": "Create global experience state and action bus",
+    "priority": "P0"
+  },
+  {
+    "id": "AECN-005",
+    "title": "Asset attribution and content-disclaimer framework",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-010",
+    "title": "Build optimized base construction scene",
+    "priority": "P0"
+  },
+  {
+    "id": "AECN-011",
+    "title": "Implement camera system and presets",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-012",
+    "title": "Implement discipline/layer visibility",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-013",
+    "title": "Implement object picking and highlighting",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-014",
+    "title": "Add quality/performance controls",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-015",
+    "title": "Add scene loading/failure boundaries",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-020",
+    "title": "Build landing hero",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-021",
+    "title": "Build mode rail/navigation",
+    "priority": "P0"
+  },
+  {
+    "id": "AECN-022",
+    "title": "Implement guided-tour engine",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-023",
+    "title": "Implement “How NVIDIA Fits” ecosystem map",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-030",
+    "title": "Create BIM element dataset",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-031",
+    "title": "Build BIM inspector",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-032",
+    "title": "Implement level/discipline isolation",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-033",
+    "title": "Build OpenUSD composition explainer",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-040",
+    "title": "Create illustrative structural result dataset",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-041",
+    "title": "Implement structural result visualization",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-042",
+    "title": "Create wind scenario datasets",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-043",
+    "title": "Implement wind field visualization",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-044",
+    "title": "Build PhysicsNeMo workflow explainer",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-050",
+    "title": "Create weather scenario data",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-051",
+    "title": "Create flood time-series data",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-052",
+    "title": "Implement flood surface and timeline",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-053",
+    "title": "Build Earth-2 → engineering workflow explainer",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-060",
+    "title": "Prepare construction demo video",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-061",
+    "title": "Build indexed video event dataset",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-062",
+    "title": "Build video intelligence panel",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-063",
+    "title": "Implement local natural-language event search",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-064",
+    "title": "Build Metropolis/VSS explainer",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-070",
+    "title": "Define construction logistics scenario",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-071",
+    "title": "Produce optimized scenario dataset",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-072",
+    "title": "Implement route visualization and playback",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-073",
+    "title": "Build KPI comparison panel",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-074",
+    "title": "Build cuOpt explainer",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-080",
+    "title": "Create robot/drone mission dataset",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-081",
+    "title": "Implement robot mission animation",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-082",
+    "title": "Add sensor visualization",
+    "priority": "P2"
+  },
+  {
+    "id": "AECN-083",
+    "title": "Build Isaac Sim explainer",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-090",
+    "title": "Choose and prepare reality-capture representation",
+    "priority": "P2"
+  },
+  {
+    "id": "AECN-091",
+    "title": "Implement capture-to-model visual sequence",
+    "priority": "P2"
+  },
+  {
+    "id": "AECN-092",
+    "title": "Add plan-vs-capture comparison",
+    "priority": "P2"
+  },
+  {
+    "id": "AECN-100",
+    "title": "Create digital-twin replay dataset",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-101",
+    "title": "Build twin operations dashboard",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-102",
+    "title": "Add cross-mode deep links from twin",
+    "priority": "P2"
+  },
+  {
+    "id": "AECN-110",
+    "title": "Define copilot intent registry",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-111",
+    "title": "Implement deterministic command parser",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-112",
+    "title": "Build copilot panel",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-113",
+    "title": "Add technology explanation intents",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-120",
+    "title": "Author final guided-tour script",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-121",
+    "title": "Connect tour steps to scene actions",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-122",
+    "title": "Add end-of-tour architecture reveal",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-130",
+    "title": "Mobile interaction pass",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-131",
+    "title": "Accessibility pass",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-132",
+    "title": "Performance profiling and optimization",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-133",
+    "title": "Progressive loading",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-140",
+    "title": "Unit test coverage for data and command logic",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-141",
+    "title": "Playwright end-to-end suite",
+    "priority": "P1"
+  },
+  {
+    "id": "AECN-142",
+    "title": "Visual regression screenshots",
+    "priority": "P2"
+  },
+  {
+    "id": "AECN-143",
+    "title": "Truthfulness/content audit",
+    "priority": "P0"
+  },
+  {
+    "id": "AECN-144",
+    "title": "Static production build and handoff",
+    "priority": "P0"
+  }
+]
