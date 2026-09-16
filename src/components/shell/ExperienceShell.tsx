@@ -35,19 +35,9 @@ export function ExperienceShell() {
               Urban construction demonstrator · procedural scene
             </p>
           </div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-3 flex justify-center px-3">
+          <div className="pointer-events-none absolute inset-x-0 bottom-3 z-20 flex justify-center px-3">
             <TourNarration />
           </div>
-          {openPanel === "ecosystem" ? (
-            <ExperienceDrawer title="How NVIDIA Fits" testId="ecosystem-drawer">
-              <HowNvidiaFits />
-            </ExperienceDrawer>
-          ) : null}
-          {openPanel === "usd" ? (
-            <ExperienceDrawer title="OpenUSD composition" testId="usd-drawer">
-              <OpenUsdExplainer />
-            </ExperienceDrawer>
-          ) : null}
         </div>
         <MobileModeBar />
         <ContextPanel
@@ -56,6 +46,16 @@ export function ExperienceShell() {
         />
       </div>
       <AppFooter />
+      {openPanel === "ecosystem" ? (
+        <ExperienceDrawer title="How NVIDIA Fits" testId="ecosystem-drawer">
+          <HowNvidiaFits />
+        </ExperienceDrawer>
+      ) : null}
+      {openPanel === "usd" ? (
+        <ExperienceDrawer title="OpenUSD composition" testId="usd-drawer">
+          <OpenUsdExplainer />
+        </ExperienceDrawer>
+      ) : null}
     </div>
   );
 }

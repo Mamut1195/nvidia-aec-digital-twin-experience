@@ -67,7 +67,9 @@ test("BIM inspector, isolation, OpenUSD explainer, and later mode stubs", async 
   await page.getByTestId("open-usd-explainer").click();
   await expect(page.getByTestId("usd-drawer")).toBeVisible();
   await expect(page.getByTestId("openusd-explainer")).toContainText("not parsed live from OpenUSD");
-  await page.getByTestId("usd-layer-architecture").uncheck();
+  const architectureLayer = page.getByTestId("usd-layer-architecture");
+  await architectureLayer.scrollIntoViewIfNeeded();
+  await architectureLayer.uncheck();
   await expect(page.getByTestId("usd-composed-stage")).not.toContainText("architecture.usd");
   await page.getByTestId("close-drawer").click();
 
@@ -86,13 +88,17 @@ test("How NVIDIA Fits keeps authoring tools separate and links official docs", a
   await page.getByTestId("how-nvidia-fits-button").click();
   await expect(page.getByTestId("ecosystem-drawer")).toBeVisible();
   await expect(page.getByTestId("how-nvidia-fits")).toContainText("do not replace Revit");
-  await page.locator('[data-product="revit"]').click();
+  const revit = page.locator('[data-product="revit"]');
+  await revit.scrollIntoViewIfNeeded();
+  await revit.click();
   await expect(page.getByTestId("ecosystem-detail")).toContainText("BIM authoring");
   await expect(page.getByTestId("ecosystem-official-link")).toHaveAttribute(
     "href",
     /autodesk\.com/,
   );
-  await page.locator('[data-product="omniverse"]').click();
+  const omniverse = page.locator('[data-product="omniverse"]');
+  await omniverse.scrollIntoViewIfNeeded();
+  await omniverse.click();
   await expect(page.getByTestId("ecosystem-official-link")).toHaveAttribute(
     "href",
     /omniverse\.nvidia\.com/,

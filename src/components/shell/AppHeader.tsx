@@ -71,7 +71,8 @@ export function AppHeader() {
         data-testid="how-nvidia-fits-button"
         onClick={() => experienceActions.setOpenPanel("ecosystem")}
       >
-        How NVIDIA Fits
+        <span className="sm:hidden">Fits</span>
+        <span className="hidden sm:inline">How NVIDIA Fits</span>
       </Button>
       <Button
         variant="quiet"
