@@ -23,8 +23,8 @@ function ModeButton({
       }`}
       onClick={() => experienceActions.setMode(mode.id)}
     >
-      <span>{compact ? mode.shortLabel : mode.label}</span>
-      {compact ? null : <StatusBadge status={mode.status} className="hidden xl:inline-flex" />}
+      <span className="min-w-0 leading-tight">{compact ? mode.shortLabel : mode.label}</span>
+      {compact ? null : <StatusBadge status={mode.status} className="shrink-0" />}
     </button>
   );
 }
@@ -51,7 +51,7 @@ export function MobileModeBar() {
   return (
     <nav
       aria-label="Experience modes"
-      className="flex gap-2 overflow-x-auto border-t border-border bg-surface/95 p-2 lg:hidden"
+      className="relative z-20 flex shrink-0 gap-2 overflow-x-auto border-t border-border bg-surface p-2 lg:hidden"
       data-testid="mobile-mode-bar"
     >
       {MODE_LIST.map((mode) => (

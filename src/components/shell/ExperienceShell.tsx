@@ -6,9 +6,12 @@ import { ScenePlaceholder } from "@/experience/scene/ScenePlaceholder";
 
 export function ExperienceShell() {
   return (
-    <div className="flex h-dvh flex-col bg-canvas text-ink" data-testid="experience-shell">
+    <div
+      className="flex h-dvh flex-col overflow-hidden bg-canvas text-ink"
+      data-testid="experience-shell"
+    >
       <AppHeader />
-      <div className="flex min-h-0 flex-1 flex-col lg:flex-row">
+      <div className="flex min-h-0 flex-1 flex-col overflow-hidden lg:flex-row">
         <ModeRail />
         <div className="relative min-h-0 min-w-0 flex-1">
           <ScenePlaceholder />
@@ -18,10 +21,9 @@ export function ExperienceShell() {
             </p>
           </div>
         </div>
-        <ContextPanel className="hidden lg:flex" />
+        <MobileModeBar />
+        <ContextPanel className="min-h-0 max-h-[32vh] lg:max-h-none" />
       </div>
-      <ContextPanel className="max-h-[38vh] lg:hidden" />
-      <MobileModeBar />
       <AppFooter />
     </div>
   );

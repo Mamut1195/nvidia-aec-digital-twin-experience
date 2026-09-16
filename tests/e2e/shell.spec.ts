@@ -24,13 +24,13 @@ test("experience shell switches modes without navigation and exposes legal copy"
 
   await modeButton.click();
   await expect(page).toHaveURL(/\/experience\/?$/);
-  await expect(page.getByTestId("context-panel").first().getByText("Structural")).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Structural" })).toBeVisible();
   await expect(page.locator('[data-status="PRECOMPUTED"]').first()).toBeVisible();
-  await expect(page.getByTestId("engineering-disclaimer").first()).toBeVisible();
+  const disclaimer = page.getByTestId("engineering-disclaimer");
+  await disclaimer.scrollIntoViewIfNeeded();
+  await expect(disclaimer).toBeVisible();
 
   await page.getByRole("button", { name: "Reset" }).click();
-  await expect(
-    page.getByTestId("context-panel").first().getByRole("heading", { name: "Overview" }),
-  ).toBeVisible();
+  await expect(page.getByRole("heading", { name: "Overview" })).toBeVisible();
   await expect(page.locator('[data-status="INTERACTIVE WEB"]').first()).toBeVisible();
 });

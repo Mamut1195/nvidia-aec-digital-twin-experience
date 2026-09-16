@@ -16,7 +16,7 @@ export function ContextPanel({ className = "" }: { className?: string }) {
 
   return (
     <aside
-      className={`flex w-full shrink-0 flex-col gap-3 overflow-y-auto border-border bg-surface p-3 lg:w-[var(--panel-width)] lg:border-l ${className}`}
+      className={`flex w-full min-h-0 shrink-0 flex-col gap-3 overflow-y-auto border-border bg-surface p-3 lg:w-[var(--panel-width)] lg:shrink-0 lg:border-l ${className}`}
       data-testid="context-panel"
     >
       <Panel title="Context">
