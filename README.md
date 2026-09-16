@@ -18,19 +18,22 @@ Never claim live NVIDIA inference, live Earth-2 forecasts, in-browser Isaac Sim,
 
 Cada superficie de UI con estado usa solo esas tres etiquetas. Nunca se presenta un resultado precomputado o simulado como inferencia NVIDIA en vivo.
 
-## Phase 0 vs later phases
+## Phase 1 vs later phases
 
-**Phase 0 (this PR):** blank but functional experience shell.
+**Phase 1 (this branch):** core 3D world on the Phase 0 shell.
 
-- Static Astro app, no backend, no auth, no secrets.
-- Design tokens and app shell (desktop + mobile).
-- Typed domain contracts + runtime validation.
-- Global experience state and action bus.
-- Legal footer, engineering disclaimer, asset attribution.
+- Procedural 8-storey construction scene (structure, partial envelope, MEP sample, site, equipment, context).
+- Camera presets with smooth transitions and reset.
+- Discipline/layer visibility.
+- Object picking, hover highlight, metadata ID.
+- Quality High / Low / Auto (DPR, shadows, particles, context LOD).
+- Deterministic loader stages, optional-asset skip, global error boundary.
 
-**Deferred to Phase 1+ (not in this branch):** construction scene geometry, camera presets in 3D, picking, landing hero extras, BIM inspector, structural/wind/flood visualization, video AI, logistics playback, robotics animation, reality capture, digital-twin dashboard, copilot, guided tour engine.
+**Deferred to Phase 2+ (not in this branch):** landing hero extras, guided tour engine, How NVIDIA Fits, BIM inspector dataset (≥60 elements), structural/wind/flood visualization, video AI, logistics playback, robotics animation, reality capture, digital-twin dashboard, copilot.
 
-See `docs/09_DELIVERY_PLAN.md` and `docs/TICKETS.md`.
+See `docs/09_DELIVERY_PLAN.md` and `docs/TICKETS.md` (AECN-010 … AECN-015).
+
+Scene coordinates: `src/experience/scene/coordinates.ts` and `public/data/scene/coordinates.json`.
 
 ## Commands
 

@@ -3,6 +3,7 @@ import { StatusBadge } from "@/components/common/StatusBadge";
 import { PRODUCT_NAME, PRODUCT_SUBTITLE } from "@/content/copy";
 import { getModeDefinition } from "@/experience/modes/mode-catalog";
 import {
+  CAMERA_PRESET_LABELS,
   CAMERA_PRESETS,
   QUALITY_LEVELS,
   experienceActions,
@@ -32,6 +33,7 @@ export function AppHeader() {
           className="min-h-10 rounded-md border border-border bg-surface-elevated px-2 text-xs text-ink"
           value={quality}
           aria-label="Quality"
+          data-testid="quality-select"
           onChange={(event) =>
             experienceActions.setQuality(parseUnion(event.target.value, QUALITY_LEVELS, "quality"))
           }
@@ -49,6 +51,7 @@ export function AppHeader() {
           className="min-h-10 rounded-md border border-border bg-surface-elevated px-2 text-xs text-ink"
           value={cameraPreset}
           aria-label="Camera preset"
+          data-testid="camera-preset-select"
           onChange={(event) =>
             experienceActions.setCameraPreset(
               parseUnion(event.target.value, CAMERA_PRESETS, "camera preset"),
@@ -57,7 +60,7 @@ export function AppHeader() {
         >
           {CAMERA_PRESETS.map((preset) => (
             <option key={preset} value={preset}>
-              {preset}
+              {CAMERA_PRESET_LABELS[preset]}
             </option>
           ))}
         </select>

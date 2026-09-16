@@ -39,6 +39,25 @@ export const LAYER_IDS = [
 ] as const;
 export type LayerId = (typeof LAYER_IDS)[number];
 
+export const LAYER_LABELS: Record<LayerId, string> = {
+  architecture: "Architecture",
+  structure: "Structure",
+  mep: "MEP",
+  terrain: "Terrain",
+  temporary: "Temporary",
+  equipment: "Equipment",
+  people: "People / context",
+};
+
+export const CAMERA_PRESET_LABELS: Record<CameraPreset, string> = {
+  overview: "Overview",
+  building: "Building",
+  "street-flood": "Street / flood",
+  logistics: "Logistics",
+  "robot-mission": "Robot mission",
+  "camera-marker": "Camera marker",
+};
+
 export const WIND_SPEEDS = ["low", "design", "extreme"] as const;
 export type WindSpeed = (typeof WIND_SPEEDS)[number];
 
