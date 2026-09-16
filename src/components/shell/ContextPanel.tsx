@@ -69,6 +69,14 @@ export function ContextPanel({
         >
           Clear selection
         </Button>
+        <button
+          type="button"
+          className="sr-only"
+          data-testid="select-sample"
+          onClick={() => experienceActions.selectElement("STR-COL-L01-C01")}
+        >
+          Select sample column
+        </button>
         <p className="mt-2 text-xs text-muted">Tap or click a highlighted object in the scene.</p>
       </Panel>
       <Panel title="View" className="lg:hidden">
@@ -78,7 +86,8 @@ export function ContextPanel({
             <select
               className="min-h-10 rounded-md border border-border bg-surface-elevated px-2 text-xs text-ink"
               value={quality}
-              aria-label="Quality"
+              aria-label="Quality (compact)"
+              data-testid="quality-select-compact"
               onChange={(event) =>
                 experienceActions.setQuality(
                   parseUnion(event.target.value, QUALITY_LEVELS, "quality"),
@@ -97,7 +106,8 @@ export function ContextPanel({
             <select
               className="min-h-10 rounded-md border border-border bg-surface-elevated px-2 text-xs text-ink"
               value={cameraPreset}
-              aria-label="Camera preset"
+              aria-label="Camera preset (compact)"
+              data-testid="camera-preset-select-compact"
               onChange={(event) =>
                 experienceActions.setCameraPreset(
                   parseUnion(event.target.value, CAMERA_PRESETS, "camera preset"),
@@ -135,9 +145,13 @@ export function ContextPanel({
       <Panel title="State">
         <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 text-xs">
           <dt className="text-muted">Quality</dt>
-          <dd className="capitalize">{quality}</dd>
+          <dd className="capitalize" data-testid="quality-state">
+            {quality}
+          </dd>
           <dt className="text-muted">Camera</dt>
-          <dd className="font-mono">{cameraPreset}</dd>
+          <dd className="font-mono" data-testid="camera-state">
+            {cameraPreset}
+          </dd>
           <dt className="text-muted">Wind</dt>
           <dd className="tabular">
             {scenarioControls.windSpeed} / {scenarioControls.windDirectionDeg}°

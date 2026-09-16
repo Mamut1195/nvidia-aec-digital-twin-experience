@@ -33,6 +33,7 @@ export function AppHeader() {
           className="min-h-10 rounded-md border border-border bg-surface-elevated px-2 text-xs text-ink"
           value={quality}
           aria-label="Quality"
+          data-testid="quality-select"
           onChange={(event) =>
             experienceActions.setQuality(parseUnion(event.target.value, QUALITY_LEVELS, "quality"))
           }
@@ -50,6 +51,7 @@ export function AppHeader() {
           className="min-h-10 rounded-md border border-border bg-surface-elevated px-2 text-xs text-ink"
           value={cameraPreset}
           aria-label="Camera preset"
+          data-testid="camera-preset-select"
           onChange={(event) =>
             experienceActions.setCameraPreset(
               parseUnion(event.target.value, CAMERA_PRESETS, "camera preset"),

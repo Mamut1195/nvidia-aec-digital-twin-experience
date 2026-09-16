@@ -19,15 +19,15 @@ test("construction scene loads and exposes camera, layers, quality, and optional
   await expect(architecture).not.toBeChecked();
 
   const isMobile = testInfo.project.name.includes("mobile");
-  const camera = page.getByLabel("Camera preset");
+  const camera = isMobile
+    ? page.getByTestId("camera-preset-select-compact")
+    : page.getByTestId("camera-preset-select");
   await camera.selectOption("building");
-  await expect(
-    page.getByTestId("context-panel").getByText("building", { exact: true }),
-  ).toBeVisible();
+  await expect(page.getByTestId("camera-state")).toHaveText("building");
 
   if (!isMobile) {
-    await page.getByLabel("Quality").selectOption("low");
-    await expect(page.getByTestId("context-panel").getByText("low", { exact: true })).toBeVisible();
+    await page.getByTestId("quality-select").selectOption("low");
+    await expect(page.getByTestId("quality-state")).toHaveText("low");
   }
 
   await page.getByRole("button", { name: "Reset" }).click();
@@ -41,10 +41,9 @@ test("selection can be cleared from the panel", async ({ page }) => {
   await expect(page.getByTestId("scene-ready")).toBeVisible({ timeout: 20_000 });
   const clear = page.getByTestId("clear-selection");
   await expect(clear).toBeDisabled();
-  await page.locator('[data-testid="scene-canvas"] canvas').click({ position: { x: 420, y: 260 } });
-  if ((await page.getByTestId("selected-element-id").textContent()) !== "none") {
-    await expect(clear).toBeEnabled();
-    await clear.click();
-    await expect(page.getByTestId("selected-element-id")).toHaveText("none");
-  }
+  await page.getByTestId("select-sample").dispatchEvent("click");
+  await expect(page.getByTestId("selected-element-id")).toHaveText("STR-COL-L01-C01");
+  await expect(clear).toBeEnabled();
+  await clear.click();
+  await expect(page.getByTestId("selected-element-id")).toHaveText("none");
 });
