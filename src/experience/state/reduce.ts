@@ -15,7 +15,14 @@ export function reduceExperience(
     case "SET_QUALITY":
       return { ...state, quality: action.quality };
     case "SET_TOUR":
-      return { ...state, guidedTourActive: action.active };
+      return {
+        ...state,
+        guidedTourActive: action.active,
+        guidedTourStepIndex: action.active ? 0 : state.guidedTourStepIndex,
+        openPanel: action.active ? null : state.openPanel,
+      };
+    case "SET_TOUR_STEP":
+      return { ...state, guidedTourStepIndex: action.index };
     case "SET_CAMERA_PRESET":
       return { ...state, cameraPreset: action.preset };
     case "SET_LAYER":
@@ -26,6 +33,26 @@ export function reduceExperience(
           [action.layer]: action.visible,
         },
       };
+    case "SET_LAYER_VISIBILITY":
+      return {
+        ...state,
+        layerVisibility: { ...action.visibility },
+      };
+    case "SET_ISOLATION":
+      return {
+        ...state,
+        isolatedLevel: action.level === undefined ? state.isolatedLevel : action.level,
+        isolatedDiscipline:
+          action.discipline === undefined ? state.isolatedDiscipline : action.discipline,
+      };
+    case "RESTORE_ISOLATION":
+      return {
+        ...state,
+        isolatedLevel: null,
+        isolatedDiscipline: null,
+      };
+    case "SET_OPEN_PANEL":
+      return { ...state, openPanel: action.panel };
     case "SET_SCENARIO":
       return {
         ...state,

@@ -23,7 +23,12 @@ function ModeButton({
       }`}
       onClick={() => experienceActions.setMode(mode.id)}
     >
-      <span className="min-w-0 leading-tight">{compact ? mode.shortLabel : mode.label}</span>
+      <span className="min-w-0 leading-tight">
+        {compact ? mode.shortLabel : mode.label}
+        {mode.availability === "later" && !compact ? (
+          <span className="mt-0.5 block text-[10px] tracking-wide text-muted uppercase">Later</span>
+        ) : null}
+      </span>
       {compact ? null : <StatusBadge status={mode.status} className="shrink-0" />}
     </button>
   );

@@ -11,6 +11,7 @@ export default [
       "coverage/**",
       "test-results/**",
       "playwright-report/**",
+      "scripts/**",
     ],
   },
   ...tseslint.configs.recommended,

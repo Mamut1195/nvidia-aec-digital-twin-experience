@@ -8,6 +8,7 @@ import type {
   ExperienceMode,
   ExperienceState,
   LayerId,
+  OpenPanel,
   QualityLevel,
   ScenarioControls,
 } from "./types";
@@ -64,11 +65,26 @@ export const experienceActions = {
   setTour(active: boolean) {
     return dispatch({ type: "SET_TOUR", active });
   },
+  setTourStep(index: number) {
+    return dispatch({ type: "SET_TOUR_STEP", index });
+  },
   setCameraPreset(preset: CameraPreset) {
     return dispatch({ type: "SET_CAMERA_PRESET", preset });
   },
   setLayer(layer: LayerId, visible: boolean) {
     return dispatch({ type: "SET_LAYER", layer, visible });
+  },
+  setLayerVisibility(visibility: Record<LayerId, boolean>) {
+    return dispatch({ type: "SET_LAYER_VISIBILITY", visibility });
+  },
+  setIsolation(patch: { level?: string | null; discipline?: LayerId | null }) {
+    return dispatch({ type: "SET_ISOLATION", ...patch });
+  },
+  restoreIsolation() {
+    return dispatch({ type: "RESTORE_ISOLATION" });
+  },
+  setOpenPanel(panel: OpenPanel) {
+    return dispatch({ type: "SET_OPEN_PANEL", panel });
   },
   setScenario(patch: Partial<ScenarioControls>) {
     return dispatch({ type: "SET_SCENARIO", patch });

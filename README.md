@@ -18,20 +18,23 @@ Never claim live NVIDIA inference, live Earth-2 forecasts, in-browser Isaac Sim,
 
 Cada superficie de UI con estado usa solo esas tres etiquetas. Nunca se presenta un resultado precomputado o simulado como inferencia NVIDIA en vivo.
 
-## Phase 1 vs later phases
+## Phase 2 vs later phases
 
-**Phase 1 (this branch):** core 3D world on the Phase 0 shell.
+**Phase 2 (this branch):** story + BIM on the Phase 0/1 shell.
 
-- Procedural 8-storey construction scene (structure, partial envelope, MEP sample, site, equipment, context).
-- Camera presets with smooth transitions and reset.
-- Discipline/layer visibility.
-- Object picking, hover highlight, metadata ID.
-- Quality High / Low / Auto (DPR, shadows, particles, context LOD).
-- Deterministic loader stages, optional-asset skip, global error boundary.
+- Landing hero with Enter, Guided Tour, and ecosystem product strip (no 3D on first paint).
+- Mode rail reaches every planned mode without a page reload. Later modes are stubbed, not fully visualized.
+- Guided-tour engine: mode, camera, layers, scripted action, narration, next/back/exit, resume from start.
+- How NVIDIA Fits map: authoring/engineering tools visually separated from the NVIDIA stack, official links, no “replaces Revit”.
+- Demo BIM dataset (≥60 elements, ≥3 disciplines, truthful source labels).
+- BIM inspector, level/discipline isolation, restore all.
+- OpenUSD composition explainer (educational USDA-style UI; the browser scene is procedural Three.js, not a live USD parse).
 
-**Deferred to Phase 2+ (not in this branch):** landing hero extras, guided tour engine, How NVIDIA Fits, BIM inspector dataset (≥60 elements), structural/wind/flood visualization, video AI, logistics playback, robotics animation, reality capture, digital-twin dashboard, copilot.
+**Deferred to Phase 3+:** structural/wind/flood visualization, video AI, logistics playback, robotics animation, reality capture, digital-twin dashboard, copilot, hardening.
 
-See `docs/09_DELIVERY_PLAN.md` and `docs/TICKETS.md` (AECN-010 … AECN-015).
+See `docs/09_DELIVERY_PLAN.md` and `docs/TICKETS.md` (AECN-020 … AECN-033).
+
+Official NVIDIA documentation links were last checked on 2026-09-16. See `docs/10_REFERENCES.md`.
 
 Scene coordinates: `src/experience/scene/coordinates.ts` and `public/data/scene/coordinates.json`.
 

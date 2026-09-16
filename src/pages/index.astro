@@ -1,9 +1,13 @@
 ---
+import { HowNvidiaFits } from "@/components/ecosystem/HowNvidiaFits";
 import { AppFooter } from "@/components/shell/AppFooter";
 import {
+  ECOSYSTEM_STRIP,
   INDEPENDENT_DEMO_NOTE,
+  LANDING_ENTER_LABEL,
+  LANDING_GUIDED_TOUR_LABEL,
+  LANDING_KICKER,
   LANDING_LEAD,
-  PHASE_NOTE,
   PRODUCT_NAME,
   PRODUCT_SUBTITLE,
 } from "@/content/copy";
@@ -18,21 +22,47 @@ import "@/styles/global.css";
     <title>{PRODUCT_NAME}</title>
   </head>
   <body class="min-h-dvh bg-canvas text-ink">
-    <main class="mx-auto flex min-h-dvh max-w-3xl flex-col justify-between px-6 py-16">
-      <section class="flex flex-col gap-6">
+    <main class="mx-auto flex min-h-dvh max-w-5xl flex-col justify-between px-6 py-16">
+      <section class="flex flex-col gap-6" data-testid="landing-hero">
+        <p class="text-xs tracking-[0.2em] text-muted uppercase">{LANDING_KICKER}</p>
         <p class="text-xs tracking-[0.2em] text-muted uppercase">{PRODUCT_NAME}</p>
         <h1 class="text-4xl font-semibold tracking-tight md:text-5xl">{PRODUCT_SUBTITLE}</h1>
         <p class="max-w-xl text-base leading-relaxed text-muted">{LANDING_LEAD}</p>
-        <p class="max-w-xl text-sm text-muted">{PHASE_NOTE}</p>
-        <a
-          class="inline-flex min-h-11 w-fit items-center rounded-md border border-accent/40 bg-accent/15 px-4 text-sm hover:bg-accent/25"
-          href="/experience"
+        <div class="flex flex-wrap gap-3">
+          <a
+            class="inline-flex min-h-11 w-fit items-center rounded-md border border-accent/40 bg-accent/15 px-4 text-sm hover:bg-accent/25"
+            href="/experience"
+            data-testid="enter-experience"
+          >
+            {LANDING_ENTER_LABEL}
+          </a>
+          <a
+            class="inline-flex min-h-11 w-fit items-center rounded-md border border-border bg-surface-elevated px-4 text-sm hover:border-muted/40"
+            href="/experience?tour=1"
+            data-testid="start-guided-tour"
+          >
+            {LANDING_GUIDED_TOUR_LABEL}
+          </a>
+        </div>
+        <ul
+          class="flex flex-wrap gap-2 pt-2"
+          data-testid="ecosystem-strip"
+          aria-label="Ecosystem products"
         >
-          Enter the Digital Twin
-        </a>
+          {ECOSYSTEM_STRIP.map((product) => (
+            <li class="rounded-sm border border-border bg-surface px-3 py-1 text-[11px] tracking-[0.12em] text-muted uppercase">
+              {product}
+            </li>
+          ))}
+        </ul>
         <p class="text-xs text-muted">{INDEPENDENT_DEMO_NOTE}</p>
       </section>
-      <AppFooter />
+      <section class="mt-16">
+        <HowNvidiaFits client:load />
+      </section>
+      <div class="mt-16">
+        <AppFooter />
+      </div>
     </main>
   </body>
 </html>

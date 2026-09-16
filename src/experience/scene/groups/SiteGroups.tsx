@@ -1,6 +1,6 @@
 import { Instance, Instances } from "@react-three/drei";
 
-import { useExperienceStore } from "@/experience/state";
+import { useDisciplineVisible } from "../use-discipline-visible";
 
 import { getFencePosts, TRUCK_POSES } from "../building-layout";
 import { SCENE_COLORS } from "../colors";
@@ -13,7 +13,7 @@ import {
 import { useSceneQuality } from "../quality-context";
 
 export function TerrainGroup() {
-  const visible = useExperienceStore((state) => state.layerVisibility.terrain);
+  const visible = useDisciplineVisible("terrain");
   const { shadows } = useSceneQuality();
 
   if (!visible) {
@@ -63,7 +63,7 @@ export function TerrainGroup() {
 }
 
 export function TemporaryWorksGroup() {
-  const visible = useExperienceStore((state) => state.layerVisibility.temporary);
+  const visible = useDisciplineVisible("temporary");
   const { shadows } = useSceneQuality();
   const posts = getFencePosts();
   const { minX, maxX, minZ, maxZ } = FENCE_BOUNDS_M;
@@ -202,7 +202,7 @@ function Excavator() {
 }
 
 export function EquipmentGroup() {
-  const visible = useExperienceStore((state) => state.layerVisibility.equipment);
+  const visible = useDisciplineVisible("equipment");
 
   if (!visible) {
     return null;
@@ -249,7 +249,7 @@ function Truck({ position }: { position: [number, number, number] }) {
 }
 
 export function VehicleGroup() {
-  const visible = useExperienceStore((state) => state.layerVisibility.equipment);
+  const visible = useDisciplineVisible("equipment");
 
   if (!visible) {
     return null;

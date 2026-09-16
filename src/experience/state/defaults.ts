@@ -10,13 +10,19 @@ const defaultLayers = {
   people: true,
 } as const satisfies Record<LayerId, boolean>;
 
+export const DEFAULT_LAYER_VISIBILITY: Record<LayerId, boolean> = { ...defaultLayers };
+
 export const DEFAULT_EXPERIENCE_STATE: ExperienceState = {
   mode: "overview",
   selectedElementId: null,
   quality: "auto",
   guidedTourActive: false,
+  guidedTourStepIndex: 0,
   cameraPreset: "overview",
   layerVisibility: { ...defaultLayers },
+  isolatedLevel: null,
+  isolatedDiscipline: null,
+  openPanel: null,
   scenarioControls: {
     windSpeed: "design",
     windDirectionDeg: 0,

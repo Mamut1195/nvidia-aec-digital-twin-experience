@@ -1,6 +1,7 @@
 import { useCursor } from "@react-three/drei";
 import { create } from "zustand";
 
+import { matchesIsolation } from "@/experience/bim/isolation";
 import { experienceActions, useExperienceStore } from "@/experience/state";
 
 import { SCENE_COLORS } from "./colors";
@@ -24,9 +25,12 @@ export function CursorSync() {
 
 function PickProxy({ item }: { item: SelectableRecord }) {
   const layerVisible = useExperienceStore((state) => state.layerVisibility[item.discipline]);
+  const isolatedLevel = useExperienceStore((state) => state.isolatedLevel);
+  const isolatedDiscipline = useExperienceStore((state) => state.isolatedDiscipline);
   const setHovered = useHoverStore((state) => state.setHovered);
+  const isolated = matchesIsolation(item, isolatedLevel, isolatedDiscipline);
 
-  if (!layerVisible) {
+  if (!layerVisible || !isolated) {
     return null;
   }
 
@@ -79,17 +83,25 @@ function HighlightBox({ item, mode }: { item: SelectableRecord; mode: "hover" | 
 
 export function SelectionSystem() {
   const selectedId = useExperienceStore((state) => state.selectedElementId);
+  const isolatedLevel = useExperienceStore((state) => state.isolatedLevel);
+  const isolatedDiscipline = useExperienceStore((state) => state.isolatedDiscipline);
   const hoveredId = useHoverStore((state) => state.hoveredElementId);
   const selected = selectedId ? getSelectable(selectedId) : undefined;
   const hovered = hoveredId && hoveredId !== selectedId ? getSelectable(hoveredId) : undefined;
+  const selectedVisible =
+    selected && matchesIsolation(selected, isolatedLevel, isolatedDiscipline)
+      ? selected
+      : undefined;
+  const hoveredVisible =
+    hovered && matchesIsolation(hovered, isolatedLevel, isolatedDiscipline) ? hovered : undefined;
 
   return (
     <group name="SelectionSystem">
       {SELECTABLES.map((item) => (
         <PickProxy key={item.id} item={item} />
       ))}
-      {hovered ? <HighlightBox item={hovered} mode="hover" /> : null}
-      {selected ? <HighlightBox item={selected} mode="selected" /> : null}
+      {hoveredVisible ? <HighlightBox item={hoveredVisible} mode="hover" /> : null}
+      {selectedVisible ? <HighlightBox item={selectedVisible} mode="selected" /> : null}
       <CursorSync />
     </group>
   );

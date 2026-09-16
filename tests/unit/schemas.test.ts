@@ -40,9 +40,9 @@ function readPublicJson(relativePath: string): unknown {
 
 describe("domain contracts", () => {
   it("accepts authored BIM, structural, wind, flood, weather, video, logistics, robot and twin fixtures", () => {
-    expect(bimDatasetSchema.parse(readPublicJson("data/bim/elements.json")).elements).toHaveLength(
-      1,
-    );
+    expect(
+      bimDatasetSchema.parse(readPublicJson("data/bim/elements.json")).elements.length,
+    ).toBeGreaterThanOrEqual(60);
     expect(
       structuralDatasetSchema.parse(readPublicJson("data/structural/results.json")).loadCases[0]
         .sourceType,

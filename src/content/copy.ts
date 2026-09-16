@@ -17,4 +17,29 @@ export const PHASE_0_NOTE =
   "Phase 0 foundation: a blank but functional experience shell. The construction scene and feature modes arrive in later phases.";
 
 export const PHASE_NOTE =
-  "Phase 1: one procedural construction scene with camera presets, discipline layers, picking, and quality controls. Feature modes (BIM inspector, wind, flood, logistics, robotics) arrive in later phases.";
+  "Phase 2: landing, guided tour, BIM inspector, level/discipline isolation, and an educational OpenUSD / How NVIDIA Fits map. Structural, wind, flood, video, logistics, robotics, reality, and twin visualizations arrive in later phases.";
+
+export const LANDING_KICKER = "NVIDIA × AEC";
+
+export const LANDING_GUIDED_TOUR_LABEL = "Take the 90-second guided tour";
+
+export const LANDING_ENTER_LABEL = "Enter the Digital Twin";
+
+export const ECOSYSTEM_STRIP = [
+  "OpenUSD",
+  "Omniverse",
+  "PhysicsNeMo",
+  "Metropolis",
+  "Earth-2",
+  "cuOpt",
+  "Isaac",
+] as const;
+
+export const LATER_MODE_NOTE =
+  "This mode is reachable now so the story stays in one shell. Its full visualization is a later phase — nothing here is live NVIDIA inference.";
+
+export const USD_TRUTH_NOTE =
+  "Educational composition diagram. This browser scene is procedural Three.js plus a USDA-style explainer — it is not parsed live from OpenUSD.";
+
+export const NVIDIA_DOES_NOT_REPLACE_REVIT =
+  "Omniverse and OpenUSD do not replace Revit, Rhino, or domain engineering solvers. They sit downstream or alongside authoring and analysis tools.";

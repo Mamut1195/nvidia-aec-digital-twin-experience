@@ -12,6 +12,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "One construction project. Mode changes stay in this shell — no page reload. The 3D world is a procedural urban construction scene.",
     showsEngineeringDisclaimer: false,
+    availability: "ready",
   },
   bim: {
     id: "bim",
@@ -19,8 +20,9 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     shortLabel: "BIM",
     status: "INTERACTIVE WEB",
     summary:
-      "Discipline layers and object picking compose one project stage. This browser scene is not parsed from USD.",
+      "Discipline layers, BIM inspector, and level isolation compose one project stage. This browser scene is procedural Three.js, not a live USD parse.",
     showsEngineeringDisclaimer: false,
+    availability: "ready",
   },
   structure: {
     id: "structure",
@@ -30,6 +32,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Illustrative structural-result visualization. A real workflow uses validated analysis models and applicable design codes.",
     showsEngineeringDisclaimer: true,
+    availability: "later",
   },
   wind: {
     id: "wind",
@@ -39,6 +42,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Precomputed wind field for education. No live PhysicsNeMo inference runs in this demo.",
     showsEngineeringDisclaimer: true,
+    availability: "later",
   },
   flood: {
     id: "flood",
@@ -48,6 +52,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Precomputed flood depths fed by a workflow-demo weather scenario. Earth-2 is not the hydraulic solver here.",
     showsEngineeringDisclaimer: true,
+    availability: "later",
   },
   "video-ai": {
     id: "video-ai",
@@ -57,6 +62,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "This browser demo will replay a pre-indexed event dataset. Metropolis/VSS is not analyzing video live.",
     showsEngineeringDisclaimer: false,
+    availability: "later",
   },
   logistics: {
     id: "logistics",
@@ -66,6 +72,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Precomputed optimization scenario inspired by cuOpt routing workflows. cuOpt did not generate these Phase 0 fixtures.",
     showsEngineeringDisclaimer: false,
+    availability: "later",
   },
   robotics: {
     id: "robotics",
@@ -74,6 +81,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     status: "WORKFLOW DEMO",
     summary: "Browser mission animation only. Isaac Sim is not running in the browser.",
     showsEngineeringDisclaimer: false,
+    availability: "later",
   },
   reality: {
     id: "reality",
@@ -83,6 +91,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Capture → reconstruction → engineering overlay will be a later-phase visual sequence.",
     showsEngineeringDisclaimer: false,
+    availability: "later",
   },
   twin: {
     id: "twin",
@@ -91,6 +100,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     status: "WORKFLOW DEMO",
     summary: "Replay of authored operational state. This is not a real-time digital twin feed.",
     showsEngineeringDisclaimer: false,
+    availability: "later",
   },
 };
 
