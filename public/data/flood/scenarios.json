@@ -1,0 +1,24 @@
+{
+  "projectId": "urban-construction-demonstrator",
+  "scenarios": [
+    {
+      "id": "rain-50",
+      "rainfallMmH": 50,
+      "sourceType": "PRECOMPUTED",
+      "timeSteps": [
+        {
+          "timeMinutes": 0,
+          "depths": [{ "x": 0, "y": -18, "depth": 0 }],
+          "affectedRoadIds": [],
+          "exposedBuildingIds": []
+        },
+        {
+          "timeMinutes": 30,
+          "depths": [{ "x": 0, "y": -18, "depth": 0.18 }],
+          "affectedRoadIds": ["ROAD-SOUTH"],
+          "exposedBuildingIds": []
+        }
+      ]
+    }
+  ]
+}

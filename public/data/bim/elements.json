@@ -1,0 +1,21 @@
+{
+  "projectId": "urban-construction-demonstrator",
+  "units": "meters",
+  "elements": [
+    {
+      "id": "STR-COL-L01-C01",
+      "name": "Column C01",
+      "category": "column",
+      "discipline": "structure",
+      "level": "L01",
+      "material": "Concrete 35 MPa",
+      "geometryNodeName": "STR_COL_L01_C01",
+      "dimensions": "0.40 × 0.60 m",
+      "properties": {
+        "grid": "A-1",
+        "heightM": 3.5
+      },
+      "sourceLabel": "Demo BIM dataset"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "id": "twin-loop-01",
+  "durationSeconds": 240,
+  "sourceType": "WORKFLOW DEMO",
+  "events": [
+    {
+      "timeSeconds": 0,
+      "kind": "progress",
+      "title": "Level 3 slab pour window",
+      "detail": "Illustrative construction progress replay."
+    },
+    {
+      "timeSeconds": 30,
+      "kind": "weather",
+      "title": "Rain band approaching",
+      "detail": "Workflow-demo weather input, not a live Earth-2 forecast."
+    },
+    {
+      "timeSeconds": 70,
+      "kind": "equipment",
+      "title": "Tower crane idle",
+      "detail": "Crane state overlay from the replay dataset.",
+      "relatedId": "EQ-CRANE-01"
+    },
+    {
+      "timeSeconds": 95,
+      "kind": "sensor",
+      "title": "Inlet depth 0.12 m",
+      "detail": "Pre-authored sensor value for the floodable low point.",
+      "relatedId": "SNS-INLET-01"
+    },
+    {
+      "timeSeconds": 140,
+      "kind": "camera",
+      "title": "Site cam 01 event",
+      "detail": "Jump target for the indexed video dataset.",
+      "relatedId": "evt-001"
+    },
+    {
+      "timeSeconds": 180,
+      "kind": "alert",
+      "title": "Road ponding",
+      "detail": "Educational alert. Not a live operations feed."
+    }
+  ]
+}

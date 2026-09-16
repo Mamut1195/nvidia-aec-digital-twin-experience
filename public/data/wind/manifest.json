@@ -1,0 +1,30 @@
+{
+  "projectId": "urban-construction-demonstrator",
+  "scenarios": [
+    {
+      "id": "design_0",
+      "speed": "design",
+      "directionDeg": 0,
+      "sourceType": "PRECOMPUTED",
+      "referenceSolver": "Illustrative CFD-style field for education only",
+      "samplePoints": [
+        {
+          "position": [12, 4, 0],
+          "velocity": [8.2, 0.1, 0.4]
+        }
+      ],
+      "facadePressures": [
+        {
+          "panelId": "FACADE-N-L04-12",
+          "pressure": 0.38
+        }
+      ],
+      "pedestrianZones": [
+        {
+          "id": "PED-GATE",
+          "comfort": "tolerable"
+        }
+      ]
+    }
+  ]
+}

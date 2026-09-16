@@ -1,0 +1,58 @@
+{
+  "projectId": "urban-construction-demonstrator",
+  "nodes": [
+    { "id": "GATE", "name": "Site gate", "kind": "gate", "x": -40, "y": 0 },
+    { "id": "ZONE-A", "name": "Building zone A", "kind": "building", "x": 0, "y": 8 }
+  ],
+  "fleet": [{ "id": "TRK-01", "kind": "truck", "capacity": 8 }],
+  "tasks": [
+    {
+      "id": "TASK-01",
+      "fromNodeId": "GATE",
+      "toNodeId": "ZONE-A",
+      "demand": 4,
+      "windowStartMinutes": 0,
+      "windowEndMinutes": 90
+    }
+  ],
+  "baselinePlan": {
+    "label": "baseline",
+    "provenance": "Authored baseline for education. Not a live dispatcher.",
+    "sourceType": "PRECOMPUTED",
+    "routes": [
+      {
+        "vehicleId": "TRK-01",
+        "stops": [
+          { "nodeId": "GATE", "arriveMinutes": 0 },
+          { "nodeId": "ZONE-A", "taskId": "TASK-01", "arriveMinutes": 22 }
+        ]
+      }
+    ],
+    "kpis": {
+      "distanceKm": 4.8,
+      "travelTimeMinutes": 22,
+      "waitTimeMinutes": 9,
+      "lateJobs": 1
+    }
+  },
+  "optimizedPlan": {
+    "label": "optimized",
+    "provenance": "Precomputed optimization scenario inspired by cuOpt routing workflows.",
+    "sourceType": "WORKFLOW DEMO",
+    "routes": [
+      {
+        "vehicleId": "TRK-01",
+        "stops": [
+          { "nodeId": "GATE", "arriveMinutes": 0 },
+          { "nodeId": "ZONE-A", "taskId": "TASK-01", "arriveMinutes": 14 }
+        ]
+      }
+    ],
+    "kpis": {
+      "distanceKm": 3.1,
+      "travelTimeMinutes": 14,
+      "waitTimeMinutes": 2,
+      "lateJobs": 0
+    }
+  }
+}

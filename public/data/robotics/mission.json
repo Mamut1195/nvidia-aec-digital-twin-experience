@@ -1,0 +1,32 @@
+{
+  "id": "inspect-l01-l02",
+  "description": "Inspect columns on Levels 1–2 and return to charging point.",
+  "sourceType": "WORKFLOW DEMO",
+  "start": [18, 0.2, -6],
+  "waypoints": [
+    { "id": "WP-START", "position": [18, 0.2, -6], "timeSeconds": 0, "kind": "start" },
+    {
+      "id": "WP-COL-C01",
+      "position": [4, 0.2, 2],
+      "timeSeconds": 18,
+      "kind": "inspect",
+      "targetId": "STR-COL-L01-C01"
+    },
+    { "id": "WP-CHARGE", "position": [18, 0.2, -6], "timeSeconds": 42, "kind": "charge" }
+  ],
+  "inspectionTargets": ["STR-COL-L01-C01"],
+  "obstacle": {
+    "id": "OBS-PALLET",
+    "appearsAtSeconds": 20,
+    "position": [8, 0.2, 0]
+  },
+  "alternatePath": [
+    { "id": "WP-REROUTE", "position": [10, 0.2, 6], "timeSeconds": 26, "kind": "reroute" },
+    { "id": "WP-CHARGE-ALT", "position": [18, 0.2, -6], "timeSeconds": 48, "kind": "charge" }
+  ],
+  "timeline": [
+    { "timeSeconds": 0, "event": "Mission start" },
+    { "timeSeconds": 18, "event": "Inspect column C01" },
+    { "timeSeconds": 20, "event": "Obstacle inserted" }
+  ]
+}
