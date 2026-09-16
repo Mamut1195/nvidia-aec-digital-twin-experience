@@ -10,7 +10,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     shortLabel: "Overview",
     status: "INTERACTIVE WEB",
     summary:
-      "One construction project. Mode changes stay in this shell — no page reload. The 3D world is a Phase 0 placeholder.",
+      "One construction project. Mode changes stay in this shell — no page reload. The 3D world is a procedural urban construction scene.",
     showsEngineeringDisclaimer: false,
   },
   bim: {
@@ -19,7 +19,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     shortLabel: "BIM",
     status: "INTERACTIVE WEB",
     summary:
-      "Discipline layers and object metadata will compose one project stage. This browser scene is not parsed from USD in Phase 0.",
+      "Discipline layers and object picking compose one project stage. This browser scene is not parsed from USD.",
     showsEngineeringDisclaimer: false,
   },
   structure: {

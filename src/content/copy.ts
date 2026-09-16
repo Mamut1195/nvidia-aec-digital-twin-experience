@@ -15,3 +15,6 @@ export const LANDING_LEAD =
 
 export const PHASE_0_NOTE =
   "Phase 0 foundation: a blank but functional experience shell. The construction scene and feature modes arrive in later phases.";
+
+export const PHASE_NOTE =
+  "Phase 1: one procedural construction scene with camera presets, discipline layers, picking, and quality controls. Feature modes (BIM inspector, wind, flood, logistics, robotics) arrive in later phases.";

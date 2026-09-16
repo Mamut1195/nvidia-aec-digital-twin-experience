@@ -1,0 +1,25 @@
+{
+  "units": "meters",
+  "upAxis": "y",
+  "origin": "building-center",
+  "axes": {
+    "x": "east",
+    "y": "up",
+    "z": "south"
+  },
+  "storeyCount": 8,
+  "storeyHeightM": 3.6,
+  "buildingSizeM": {
+    "x": 40,
+    "z": 30
+  },
+  "buildingHeightM": 28.8,
+  "columnGridXm": [-20, -12, -4, 4, 12, 20],
+  "columnGridZm": [-15, -7.5, 0, 7.5, 15],
+  "siteExtentsM": {
+    "x": [-50, 72],
+    "z": [-58, 58]
+  },
+  "cranePositionM": [4, 0, -32],
+  "excavatorPositionM": [-26, 0, 8]
+}

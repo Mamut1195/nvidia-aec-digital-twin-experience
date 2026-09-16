@@ -19,9 +19,11 @@ export type {
   ScenarioControls,
 } from "./types";
 export {
+  CAMERA_PRESET_LABELS,
   CAMERA_PRESETS,
   EXPERIENCE_MODES,
   LAYER_IDS,
+  LAYER_LABELS,
   LOGISTICS_PLANS,
   QUALITY_LEVELS,
   STRUCTURAL_LOAD_CASES,

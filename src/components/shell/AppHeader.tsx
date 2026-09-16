@@ -3,6 +3,7 @@ import { StatusBadge } from "@/components/common/StatusBadge";
 import { PRODUCT_NAME, PRODUCT_SUBTITLE } from "@/content/copy";
 import { getModeDefinition } from "@/experience/modes/mode-catalog";
 import {
+  CAMERA_PRESET_LABELS,
   CAMERA_PRESETS,
   QUALITY_LEVELS,
   experienceActions,
@@ -57,7 +58,7 @@ export function AppHeader() {
         >
           {CAMERA_PRESETS.map((preset) => (
             <option key={preset} value={preset}>
-              {preset}
+              {CAMERA_PRESET_LABELS[preset]}
             </option>
           ))}
         </select>

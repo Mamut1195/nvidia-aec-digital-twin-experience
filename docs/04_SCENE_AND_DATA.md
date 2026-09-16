@@ -56,11 +56,22 @@ Add `public/assets/ATTRIBUTION.md`.
 
 ## 3. Coordinate conventions
 
-Use:
-- meters;
-- Y-up or Three.js-native convention consistently;
-- site origin near building center;
-- coordinates documented in one file.
+Documented source of truth: `src/experience/scene/coordinates.ts`  
+JSON snapshot: `public/data/scene/coordinates.json`
+
+- Units: **meters**
+- Up axis: **+Y** (Three.js native)
+- Origin: centroid of the main building on the ground plane (`y = 0`)
+- Axes: **+X east**, **+Y up**, **+Z south** (crane / north side is −Z)
+
+Building: 8 storeys × 3.6 m = 28.8 m to roof slab; footprint 40 m × 30 m.
+
+Column grid (m):
+
+- X: −20, −12, −4, 4, 12, 20 (labels A–F)
+- Z: −15, −7.5, 0, 7.5, 15 (labels 1–5)
+
+Site extents approximately X [−50, 72], Z [−58, 58]. Crane at (4, 0, −32).
 
 ## 4. Semantic IDs
 
