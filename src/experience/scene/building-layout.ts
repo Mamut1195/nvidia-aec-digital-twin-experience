@@ -17,6 +17,7 @@ import {
 export interface InstancePose {
   key: string;
   position: [number, number, number];
+  storey?: number;
 }
 
 export interface SizedPose extends InstancePose {
@@ -51,6 +52,7 @@ export function getBeamsX(): InstancePose[] {
         items.push({
           key: `bx-L${level}-${xi}-${zi}`,
           position: [(x0 + x1) / 2, y, COLUMN_GRID_Z[zi]],
+          storey: level,
         });
       }
     }
@@ -69,6 +71,7 @@ export function getBeamsZ(): InstancePose[] {
         items.push({
           key: `bz-L${level}-${xi}-${zi}`,
           position: [COLUMN_GRID_X[xi], y, (z0 + z1) / 2],
+          storey: level,
         });
       }
     }
@@ -83,6 +86,7 @@ export function getSlabs(): SizedPose[] {
       key: `slab-L${String(level).padStart(2, "0")}`,
       position: [0, level * STOREY_HEIGHT_M - SLAB_THICKNESS_M / 2, 0],
       size: [40.4, SLAB_THICKNESS_M, 30.4],
+      storey: level,
     });
   }
   return items;
@@ -111,6 +115,7 @@ export function getSouthFacadePanels(): SizedPose[] {
         key: `fac-s-L${level}-${xi}`,
         position: [(x0 + x1) / 2, y, z],
         size: [BAY_X_M - 0.55, STOREY_HEIGHT_M - 0.45, 0.12],
+        storey: level,
       });
     }
   }
@@ -129,6 +134,7 @@ export function getEastFacadePanels(): SizedPose[] {
         key: `fac-e-L${level}-${zi}`,
         position: [x, y, (z0 + z1) / 2],
         size: [0.12, STOREY_HEIGHT_M - 0.45, BAY_Z_M - 0.55],
+        storey: level,
       });
     }
   }
@@ -207,9 +213,51 @@ export const ROBOT_WAYPOINTS: [number, number, number][] = [
   [6, 0.35, 8],
 ];
 
+export function getColumnInstancesForStorey(storey: number): InstancePose[] {
+  const y = (storey - 0.5) * STOREY_HEIGHT_M;
+  const items: InstancePose[] = [];
+  for (let xi = 0; xi < COLUMN_GRID_X.length; xi += 1) {
+    for (let zi = 0; zi < COLUMN_GRID_Z.length; zi += 1) {
+      items.push({
+        key: `col-${columnGridLabel(xi, zi)}-L${storey}`,
+        position: [COLUMN_GRID_X[xi], y, COLUMN_GRID_Z[zi]],
+        storey,
+      });
+    }
+  }
+  return items;
+}
+
+export function getCoreWallsForStorey(storey: number): SizedPose[] {
+  const y = (storey - 0.5) * STOREY_HEIGHT_M;
+  const height = STOREY_HEIGHT_M - 0.08;
+  return [
+    { key: `core-n-L${storey}`, position: [0, y, -4], size: [8.4, height, 0.32], storey },
+    { key: `core-s-L${storey}`, position: [0, y, 4], size: [8.4, height, 0.32], storey },
+    { key: `core-w-L${storey}`, position: [-4, y, 0], size: [0.32, height, 8], storey },
+    { key: `core-e-L${storey}`, position: [4, y, 0], size: [0.32, height, 8], storey },
+  ];
+}
+
+export function filterByStorey<T extends { storey?: number }>(
+  items: T[],
+  storey: number | null,
+): T[] {
+  if (storey === null) {
+    return items;
+  }
+  return items.filter((item) => item.storey === storey);
+}
+
 export const COLUMN_INSTANCE_SIZE: [number, number, number] = [
   COLUMN_SECTION_M.x,
   BUILDING_HEIGHT_M,
+  COLUMN_SECTION_M.z,
+];
+
+export const COLUMN_STOREY_SIZE: [number, number, number] = [
+  COLUMN_SECTION_M.x,
+  STOREY_HEIGHT_M,
   COLUMN_SECTION_M.z,
 ];
 

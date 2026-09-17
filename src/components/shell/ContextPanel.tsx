@@ -2,10 +2,11 @@ import { Button } from "@/components/common/Button";
 import { EngineeringDisclaimer } from "@/components/common/EngineeringDisclaimer";
 import { Panel } from "@/components/common/Panel";
 import { StatusBadge } from "@/components/common/StatusBadge";
-import { PHASE_NOTE } from "@/content/copy";
+import { IsolationControls } from "@/components/shell/IsolationControls";
+import { BimInspector } from "@/components/shell/BimInspector";
+import { LATER_MODE_NOTE, PHASE_NOTE } from "@/content/copy";
 import { getModeDefinition } from "@/experience/modes/mode-catalog";
 import type { LoadStageStatus } from "@/experience/scene/load-stages";
-import { getSelectable } from "@/experience/scene/selectables";
 import {
   CAMERA_PRESET_LABELS,
   CAMERA_PRESETS,
@@ -25,13 +26,12 @@ export function ContextPanel({
   optionalOverlayStatus?: LoadStageStatus;
 }) {
   const mode = useExperienceStore((state) => state.mode);
-  const selectedElementId = useExperienceStore((state) => state.selectedElementId);
   const layerVisibility = useExperienceStore((state) => state.layerVisibility);
   const scenarioControls = useExperienceStore((state) => state.scenarioControls);
   const cameraPreset = useExperienceStore((state) => state.cameraPreset);
   const quality = useExperienceStore((state) => state.quality);
   const definition = getModeDefinition(mode);
-  const selected = selectedElementId ? getSelectable(selectedElementId) : undefined;
+  const later = definition.availability === "later";
 
   return (
     <aside
@@ -45,40 +45,32 @@ export function ContextPanel({
             <StatusBadge status={definition.status} />
           </div>
           <p className="text-sm leading-relaxed text-muted">{definition.summary}</p>
+          {later ? <p className="text-xs text-muted">{LATER_MODE_NOTE}</p> : null}
           <p className="text-xs text-muted">{PHASE_NOTE}</p>
           {definition.showsEngineeringDisclaimer ? <EngineeringDisclaimer /> : null}
+          {mode === "overview" ? (
+            <div className="flex flex-col gap-2">
+              <Button variant="primary" onClick={() => experienceActions.setMode("bim")}>
+                Open BIM / OpenUSD
+              </Button>
+              <Button variant="ghost" onClick={() => experienceActions.setOpenPanel("ecosystem")}>
+                How NVIDIA Fits
+              </Button>
+            </div>
+          ) : null}
+          {mode === "bim" ? (
+            <Button
+              variant="primary"
+              data-testid="open-usd-explainer"
+              onClick={() => experienceActions.setOpenPanel("usd")}
+            >
+              OpenUSD composition view
+            </Button>
+          ) : null}
         </div>
       </Panel>
-      <Panel title="Selection" className="sm:block">
-        <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-2 text-xs">
-          <dt className="text-muted">ID</dt>
-          <dd className="font-mono tabular" data-testid="selected-element-id">
-            {selectedElementId ?? "none"}
-          </dd>
-          <dt className="text-muted">Name</dt>
-          <dd>{selected?.name ?? "—"}</dd>
-          <dt className="text-muted">Category</dt>
-          <dd className="capitalize">{selected?.category ?? "—"}</dd>
-        </dl>
-        <Button
-          className="mt-3 w-full"
-          variant="ghost"
-          disabled={!selectedElementId}
-          data-testid="clear-selection"
-          onClick={() => experienceActions.selectElement(null)}
-        >
-          Clear selection
-        </Button>
-        <button
-          type="button"
-          className="sr-only"
-          data-testid="select-sample"
-          onClick={() => experienceActions.selectElement("STR-COL-L01-C01")}
-        >
-          Select sample column
-        </button>
-        <p className="mt-2 text-xs text-muted">Tap or click a highlighted object in the scene.</p>
-      </Panel>
+      <BimInspector />
+      {mode === "bim" || mode === "overview" ? <IsolationControls /> : null}
       <Panel title="View" className="lg:hidden">
         <div className="flex flex-col gap-3">
           <label className="flex min-h-10 items-center justify-between gap-3 text-sm sm:hidden">

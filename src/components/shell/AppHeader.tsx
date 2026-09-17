@@ -9,6 +9,7 @@ import {
   experienceActions,
   useExperienceStore,
 } from "@/experience/state";
+import { exitGuidedTour, startGuidedTour } from "@/experience/tour/tour-engine";
 import { parseUnion } from "@/lib/parse-union";
 
 export function AppHeader() {
@@ -67,8 +68,23 @@ export function AppHeader() {
       </label>
       <Button
         variant="quiet"
+        data-testid="how-nvidia-fits-button"
+        onClick={() => experienceActions.setOpenPanel("ecosystem")}
+      >
+        <span className="sm:hidden">Fits</span>
+        <span className="hidden sm:inline">How NVIDIA Fits</span>
+      </Button>
+      <Button
+        variant="quiet"
         aria-pressed={guidedTourActive}
-        onClick={() => experienceActions.setTour(!guidedTourActive)}
+        data-testid="header-tour"
+        onClick={() => {
+          if (guidedTourActive) {
+            exitGuidedTour();
+            return;
+          }
+          startGuidedTour();
+        }}
       >
         {guidedTourActive ? "Exit tour" : "Tour"}
       </Button>

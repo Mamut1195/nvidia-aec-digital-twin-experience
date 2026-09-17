@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import type { Points } from "three";
 
-import { useExperienceStore } from "@/experience/state";
+import { useDisciplineVisible } from "../use-discipline-visible";
 
 import {
   CAMERA_MARKER_POSITIONS,
@@ -34,7 +34,7 @@ function Worker({ position }: { position: [number, number, number] }) {
 }
 
 export function WorkerGroup() {
-  const visible = useExperienceStore((state) => state.layerVisibility.people);
+  const visible = useDisciplineVisible("people");
   const { contextLod, shadows } = useSceneQuality();
   const buildings = contextLod === "high" ? CONTEXT_BUILDINGS_HIGH : CONTEXT_BUILDINGS_LOW;
 

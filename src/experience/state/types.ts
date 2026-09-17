@@ -83,13 +83,29 @@ export interface ScenarioControls {
   twinTimeSeconds: number;
 }
 
+export const OPEN_PANELS = ["ecosystem", "usd"] as const;
+export type OpenPanel = (typeof OPEN_PANELS)[number] | null;
+
+export const USD_SOURCE_LAYERS = [
+  "architecture",
+  "structure",
+  "mep",
+  "terrain",
+  "equipment",
+] as const;
+export type UsdSourceLayer = (typeof USD_SOURCE_LAYERS)[number];
+
 export interface ExperienceState {
   mode: ExperienceMode;
   selectedElementId: string | null;
   quality: QualityLevel;
   guidedTourActive: boolean;
+  guidedTourStepIndex: number;
   cameraPreset: CameraPreset;
   layerVisibility: Record<LayerId, boolean>;
+  isolatedLevel: string | null;
+  isolatedDiscipline: LayerId | null;
+  openPanel: OpenPanel;
   scenarioControls: ScenarioControls;
 }
 
@@ -98,8 +114,13 @@ export type ExperienceAction =
   | { type: "SELECT_ELEMENT"; elementId: string | null }
   | { type: "SET_QUALITY"; quality: QualityLevel }
   | { type: "SET_TOUR"; active: boolean }
+  | { type: "SET_TOUR_STEP"; index: number }
   | { type: "SET_CAMERA_PRESET"; preset: CameraPreset }
   | { type: "SET_LAYER"; layer: LayerId; visible: boolean }
+  | { type: "SET_LAYER_VISIBILITY"; visibility: Record<LayerId, boolean> }
+  | { type: "SET_ISOLATION"; level?: string | null; discipline?: LayerId | null }
+  | { type: "RESTORE_ISOLATION" }
+  | { type: "SET_OPEN_PANEL"; panel: OpenPanel }
   | { type: "SET_SCENARIO"; patch: Partial<ScenarioControls> }
   | { type: "RESET" };
 
@@ -110,4 +131,5 @@ export interface ModeDefinition {
   status: TruthStatus;
   summary: string;
   showsEngineeringDisclaimer: boolean;
+  availability: "ready" | "later";
 }
