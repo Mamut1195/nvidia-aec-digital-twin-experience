@@ -30,7 +30,7 @@ test("construction scene loads and exposes camera, layers, quality, and optional
     await expect(page.getByTestId("quality-state")).toHaveText("low");
   }
 
-  await page.getByRole("button", { name: "Reset" }).click();
+  await page.getByTestId("reset-experience").click();
   await expect(architecture).toBeChecked();
   await expect(camera).toHaveValue("overview");
   await expect(page.getByRole("heading", { name: "Overview" })).toBeVisible();

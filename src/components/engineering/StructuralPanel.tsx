@@ -1,5 +1,4 @@
 import { Button } from "@/components/common/Button";
-import { EngineeringDisclaimer } from "@/components/common/EngineeringDisclaimer";
 import { Panel } from "@/components/common/Panel";
 import { ResultLegend } from "@/components/engineering/ResultLegend";
 import {
@@ -57,7 +56,6 @@ export function StructuralPanel() {
         <p className="text-xs leading-relaxed text-muted" data-testid="structural-disclaimer">
           {loadCase.disclaimer} Illustrative — not a design check.
         </p>
-        <EngineeringDisclaimer />
         <label className="flex min-h-10 items-center justify-between gap-3 text-sm">
           <span>Load case</span>
           <select

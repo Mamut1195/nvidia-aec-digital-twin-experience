@@ -23,6 +23,7 @@ test("structural heatmap, selectors, inspectable values, and not-a-design-check 
   await expect(page.getByTestId("structural-panel")).toBeVisible();
   await expect(page.getByTestId("structural-disclaimer")).toContainText("not a design check");
   await expect(page.getByTestId("structural-disclaimer")).toContainText("Illustrative");
+  await expect(page.getByTestId("engineering-disclaimer")).toHaveCount(1);
   await expect(page.getByTestId("engineering-disclaimer")).toBeVisible();
   await expect(page.getByTestId("structural-legend")).toBeVisible();
 
@@ -53,7 +54,7 @@ test("wind particles, facade pressure, pedestrian overlay, PRECOMPUTED, PhysicsN
   await page.getByTestId("wind-panel").scrollIntoViewIfNeeded();
   await expect(page.getByTestId("wind-scenario-id")).toBeVisible({ timeout: 15_000 });
   await expect(page.getByTestId("wind-panel")).toBeVisible();
-  await expect(page.getByTestId("wind-panel").getByText("PRECOMPUTED")).toBeVisible();
+  await expect(page.getByTestId("wind-panel").locator("[data-status='PRECOMPUTED']")).toBeVisible();
   await expect(page.getByTestId("wind-scenario-id")).toHaveText("design_0");
 
   await page.getByTestId("wind-speed").selectOption("extreme");
