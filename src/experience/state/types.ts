@@ -61,6 +61,12 @@ export const CAMERA_PRESET_LABELS: Record<CameraPreset, string> = {
 export const WIND_SPEEDS = ["low", "design", "extreme"] as const;
 export type WindSpeed = (typeof WIND_SPEEDS)[number];
 
+export const WIND_DIRECTIONS_DEG = [0, 90] as const;
+export type WindDirectionDeg = (typeof WIND_DIRECTIONS_DEG)[number];
+
+export const WIND_VIEWS = ["particles", "streamlines", "facade"] as const;
+export type WindView = (typeof WIND_VIEWS)[number];
+
 export const STRUCTURAL_LOAD_CASES = ["gravity", "lateral-x", "lateral-y"] as const;
 export type StructuralLoadCaseId = (typeof STRUCTURAL_LOAD_CASES)[number];
 
@@ -70,10 +76,15 @@ export type StructuralResultType = (typeof STRUCTURAL_RESULT_TYPES)[number];
 export const LOGISTICS_PLANS = ["baseline", "optimized"] as const;
 export type LogisticsPlanId = (typeof LOGISTICS_PLANS)[number];
 
+export const FLOOD_RAINFALL_MMH = [20, 50, 100] as const;
+export type FloodRainfallMmH = (typeof FLOOD_RAINFALL_MMH)[number];
+
 export interface ScenarioControls {
   windSpeed: WindSpeed;
-  windDirectionDeg: 0 | 90 | 180 | 270;
-  floodRainfallMmH: 20 | 50 | 100;
+  windDirectionDeg: WindDirectionDeg;
+  windView: WindView;
+  windPedestrianOverlay: boolean;
+  floodRainfallMmH: FloodRainfallMmH;
   floodTimeMinutes: number;
   structuralLoadCase: StructuralLoadCaseId;
   structuralResultType: StructuralResultType;
@@ -83,8 +94,9 @@ export interface ScenarioControls {
   twinTimeSeconds: number;
 }
 
-export const OPEN_PANELS = ["ecosystem", "usd"] as const;
-export type OpenPanel = (typeof OPEN_PANELS)[number] | null;
+export const OPEN_PANELS = ["ecosystem", "usd", "physicsnemo", "earth2"] as const;
+export type OpenPanelId = (typeof OPEN_PANELS)[number];
+export type OpenPanel = OpenPanelId | null;
 
 export const USD_SOURCE_LAYERS = [
   "architecture",

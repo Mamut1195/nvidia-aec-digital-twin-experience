@@ -1,7 +1,7 @@
 export { bimDatasetSchema, bimElementSchema } from "./bim";
 export type { BimDataset, BimElement } from "./bim";
 export { floodDatasetSchema, floodScenarioSchema } from "./flood";
-export type { FloodDataset, FloodScenario } from "./flood";
+export type { FloodDataset, FloodGrid, FloodScenario, FloodTimeStep } from "./flood";
 export { logisticsDatasetSchema } from "./logistics";
 export type { LogisticsDataset } from "./logistics";
 export { robotMissionSchema } from "./robotics";
@@ -14,7 +14,7 @@ export { videoEventIndexSchema, videoEventSchema } from "./video";
 export type { VideoEvent, VideoEventIndex } from "./video";
 export { weatherDatasetSchema, weatherScenarioSchema } from "./weather";
 export type { WeatherDataset, WeatherScenario } from "./weather";
-export { windDatasetSchema, windScenarioSchema } from "./wind";
-export type { WindDataset, WindScenario } from "./wind";
+export { windDatasetSchema, windManifestSchema, windScenarioSchema } from "./wind";
+export type { WindDataset, WindManifest, WindScenario } from "./wind";
 export { COORDINATE_CONVENTION, TRUTH_STATUSES, truthStatusSchema } from "./common";
 export type { TruthStatus, Vec3 } from "./common";

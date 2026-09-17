@@ -30,7 +30,7 @@ test("experience shell switches modes without navigation and exposes legal copy"
   await disclaimer.scrollIntoViewIfNeeded();
   await expect(disclaimer).toBeVisible();
 
-  await page.getByRole("button", { name: "Reset" }).click();
+  await page.getByTestId("reset-experience").click();
   await expect(page.getByRole("heading", { name: "Overview" })).toBeVisible();
   await expect(page.locator('[data-status="INTERACTIVE WEB"]').first()).toBeVisible();
 });

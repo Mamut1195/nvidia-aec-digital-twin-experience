@@ -17,7 +17,7 @@ export const PHASE_0_NOTE =
   "Phase 0 foundation: a blank but functional experience shell. The construction scene and feature modes arrive in later phases.";
 
 export const PHASE_NOTE =
-  "Phase 2: landing, guided tour, BIM inspector, level/discipline isolation, and an educational OpenUSD / How NVIDIA Fits map. Structural, wind, flood, video, logistics, robotics, reality, and twin visualizations arrive in later phases.";
+  "Phase 3: structural, wind/PhysicsNeMo and flood/Earth-2 visualizations on the Phase 2 shell. Video, logistics, robotics, reality and twin modes remain later-phase stubs — nothing here is live NVIDIA inference.";
 
 export const LANDING_KICKER = "NVIDIA × AEC";
 

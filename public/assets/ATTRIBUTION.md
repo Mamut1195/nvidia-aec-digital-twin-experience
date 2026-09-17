@@ -4,9 +4,9 @@ This file records provenance for every media, model, texture, font and dataset u
 
 This repository is an **independent educational demonstration**. It is not an official NVIDIA product. NVIDIA product names and trademarks belong to NVIDIA Corporation.
 
-## Phase 0–2
+## Phase 0–3
 
-Phase 2 still ships a procedural construction scene plus an authored demo BIM dataset. There are no downloaded construction-site GLB models, videos, point clouds or proprietary BIM exports in this release. `/models/optional-overlay.glb` is an intentional empty slot: the loader must skip a missing optional asset without crashing.
+Phase 3 still ships a procedural construction scene plus authored demo datasets. There are no downloaded construction-site GLB models, videos, point clouds or proprietary BIM exports in this release. `/models/optional-overlay.glb` is an intentional empty slot: the loader must skip a missing optional asset without crashing.
 
 | Asset | Location | License | Source | Notes |
 | --- | --- | --- | --- | --- |
@@ -15,6 +15,10 @@ Phase 2 still ships a procedural construction scene plus an authored demo BIM da
 | Procedural site geometry | `src/experience/scene/**` | Apache-2.0 (this repo) | Original authored meshes | Columns, beams, slabs, facade, MEP, terrain, equipment and context buildings are generated at runtime. Not a Revit/USD export. |
 | Schema fixtures | `public/data/**/*.json` | Apache-2.0 (this repo) | Original authored data | Contract fixtures. Not measured engineering results. |
 | Demo BIM dataset | `public/data/bim/elements.json` | Apache-2.0 (this repo) | Original authored data | ≥60 selectable elements. Not a Revit/USD export. Inspector source labels are “Demo BIM dataset” or “Example authoring source: Revit”. |
+| Illustrative structural results | `public/data/structural/results.json` | Apache-2.0 (this repo) | Original authored data | PRECOMPUTED educational scalars and displacement vectors. Not a design check and not an OpenSees run. |
+| Precomputed wind field | `public/data/wind/*.json` | Apache-2.0 (this repo) | Original authored data | Synthetic CFD-style sample field, facade pressures and pedestrian zones. Not OpenFOAM and not live PhysicsNeMo inference. |
+| Flood time series | `public/data/flood/*.json` | Apache-2.0 (this repo) | Original authored data | PRECOMPUTED depths, affected roads and buildings. Not a hydraulic solver output. |
+| Weather scenarios | `public/data/weather/scenarios.json` | Apache-2.0 (this repo) | Original authored data | WORKFLOW DEMO labels. Not a live Earth-2 forecast. |
 | Scene coordinates | `public/data/scene/coordinates.json` | Apache-2.0 (this repo) | Original | Meters, Y-up, origin at building center. |
 
 ## Later phases

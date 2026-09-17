@@ -1,5 +1,7 @@
 import { Instance, Instances } from "@react-three/drei";
 
+import { useExperienceStore } from "@/experience/state";
+
 import {
   BEAM_X_SIZE,
   BEAM_Z_SIZE,
@@ -25,6 +27,7 @@ export function StructureGroup() {
   const visible = useDisciplineVisible("structure");
   const isolatedStorey = useIsolatedStorey();
   const { shadows } = useSceneQuality();
+  const structureMode = useExperienceStore((state) => state.mode === "structure");
   const columns =
     isolatedStorey === null ? getColumnInstances() : getColumnInstancesForStorey(isolatedStorey);
   const columnSize = isolatedStorey === null ? COLUMN_INSTANCE_SIZE : COLUMN_STOREY_SIZE;
@@ -46,7 +49,13 @@ export function StructureGroup() {
         receiveShadow={shadows}
       >
         <boxGeometry args={columnSize} />
-        <meshStandardMaterial color={SCENE_COLORS.concrete} roughness={0.88} metalness={0.04} />
+        <meshStandardMaterial
+          color={SCENE_COLORS.concrete}
+          roughness={0.88}
+          metalness={0.04}
+          transparent={structureMode}
+          opacity={structureMode ? 0.18 : 1}
+        />
         {columns.map((column) => (
           <Instance key={column.key} position={column.position} />
         ))}
@@ -58,7 +67,13 @@ export function StructureGroup() {
         receiveShadow={shadows}
       >
         <boxGeometry args={BEAM_X_SIZE} />
-        <meshStandardMaterial color={SCENE_COLORS.steel} roughness={0.42} metalness={0.55} />
+        <meshStandardMaterial
+          color={SCENE_COLORS.steel}
+          roughness={0.42}
+          metalness={0.55}
+          transparent={structureMode}
+          opacity={structureMode ? 0.18 : 1}
+        />
         {beamsX.map((beam) => (
           <Instance key={beam.key} position={beam.position} />
         ))}
@@ -70,7 +85,13 @@ export function StructureGroup() {
         receiveShadow={shadows}
       >
         <boxGeometry args={BEAM_Z_SIZE} />
-        <meshStandardMaterial color={SCENE_COLORS.steel} roughness={0.42} metalness={0.55} />
+        <meshStandardMaterial
+          color={SCENE_COLORS.steel}
+          roughness={0.42}
+          metalness={0.55}
+          transparent={structureMode}
+          opacity={structureMode ? 0.18 : 1}
+        />
         {beamsZ.map((beam) => (
           <Instance key={beam.key} position={beam.position} />
         ))}
@@ -78,7 +99,13 @@ export function StructureGroup() {
       {slabs.map((slab) => (
         <mesh key={slab.key} position={slab.position} castShadow={shadows} receiveShadow={shadows}>
           <boxGeometry args={slab.size} />
-          <meshStandardMaterial color={SCENE_COLORS.concrete} roughness={0.9} metalness={0.03} />
+          <meshStandardMaterial
+            color={SCENE_COLORS.concrete}
+            roughness={0.9}
+            metalness={0.03}
+            transparent={structureMode}
+            opacity={structureMode ? 0.16 : 1}
+          />
         </mesh>
       ))}
       {core.map((wall) => (
@@ -88,6 +115,8 @@ export function StructureGroup() {
             color={SCENE_COLORS.concreteCore}
             roughness={0.86}
             metalness={0.04}
+            transparent={structureMode}
+            opacity={structureMode ? 0.16 : 1}
           />
         </mesh>
       ))}

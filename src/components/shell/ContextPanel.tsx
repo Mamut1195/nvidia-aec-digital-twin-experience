@@ -2,6 +2,9 @@ import { Button } from "@/components/common/Button";
 import { EngineeringDisclaimer } from "@/components/common/EngineeringDisclaimer";
 import { Panel } from "@/components/common/Panel";
 import { StatusBadge } from "@/components/common/StatusBadge";
+import { FloodPanel } from "@/components/engineering/FloodPanel";
+import { StructuralPanel } from "@/components/engineering/StructuralPanel";
+import { WindPanel } from "@/components/engineering/WindPanel";
 import { IsolationControls } from "@/components/shell/IsolationControls";
 import { BimInspector } from "@/components/shell/BimInspector";
 import { LATER_MODE_NOTE, PHASE_NOTE } from "@/content/copy";
@@ -67,10 +70,31 @@ export function ContextPanel({
               OpenUSD composition view
             </Button>
           ) : null}
+          {mode === "wind" ? (
+            <Button
+              variant="primary"
+              data-testid="open-physicsnemo-context"
+              onClick={() => experienceActions.setOpenPanel("physicsnemo")}
+            >
+              PhysicsNeMo workflow
+            </Button>
+          ) : null}
+          {mode === "flood" ? (
+            <Button
+              variant="primary"
+              data-testid="open-earth2-context"
+              onClick={() => experienceActions.setOpenPanel("earth2")}
+            >
+              Earth-2 → engineering
+            </Button>
+          ) : null}
         </div>
       </Panel>
       <BimInspector />
-      {mode === "bim" || mode === "overview" ? <IsolationControls /> : null}
+      {mode === "bim" || mode === "overview" || mode === "structure" ? <IsolationControls /> : null}
+      {mode === "structure" ? <StructuralPanel /> : null}
+      {mode === "wind" ? <WindPanel /> : null}
+      {mode === "flood" ? <FloodPanel /> : null}
       <Panel title="View" className="lg:hidden">
         <div className="flex flex-col gap-3">
           <label className="flex min-h-10 items-center justify-between gap-3 text-sm sm:hidden">

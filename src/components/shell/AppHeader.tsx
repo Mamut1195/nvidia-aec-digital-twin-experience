@@ -88,7 +88,11 @@ export function AppHeader() {
       >
         {guidedTourActive ? "Exit tour" : "Tour"}
       </Button>
-      <Button variant="ghost" onClick={() => experienceActions.reset()}>
+      <Button
+        variant="ghost"
+        data-testid="reset-experience"
+        onClick={() => experienceActions.reset()}
+      >
         Reset
       </Button>
     </header>

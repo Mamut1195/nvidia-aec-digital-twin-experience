@@ -32,7 +32,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Illustrative structural-result visualization. A real workflow uses validated analysis models and applicable design codes.",
     showsEngineeringDisclaimer: true,
-    availability: "later",
+    availability: "ready",
   },
   wind: {
     id: "wind",
@@ -42,7 +42,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Precomputed wind field for education. No live PhysicsNeMo inference runs in this demo.",
     showsEngineeringDisclaimer: true,
-    availability: "later",
+    availability: "ready",
   },
   flood: {
     id: "flood",
@@ -52,7 +52,7 @@ export const MODE_CATALOG: Record<ExperienceMode, ModeDefinition> = {
     summary:
       "Precomputed flood depths fed by a workflow-demo weather scenario. Earth-2 is not the hydraulic solver here.",
     showsEngineeringDisclaimer: true,
-    availability: "later",
+    availability: "ready",
   },
   "video-ai": {
     id: "video-ai",

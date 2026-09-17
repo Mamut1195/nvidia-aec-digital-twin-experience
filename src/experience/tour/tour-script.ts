@@ -1,5 +1,11 @@
 import { DEFAULT_LAYER_VISIBILITY } from "@/experience/state/defaults";
-import type { CameraPreset, ExperienceMode, LayerId } from "@/experience/state/types";
+import type {
+  CameraPreset,
+  ExperienceMode,
+  LayerId,
+  OpenPanelId,
+  ScenarioControls,
+} from "@/experience/state/types";
 
 export type TourScriptedAction =
   | { type: "none" }
@@ -7,8 +13,9 @@ export type TourScriptedAction =
   | { type: "isolate-level"; level: string }
   | { type: "isolate-discipline"; discipline: LayerId }
   | { type: "restore-isolation" }
-  | { type: "open-panel"; panel: "ecosystem" | "usd" }
-  | { type: "close-panel" };
+  | { type: "open-panel"; panel: OpenPanelId }
+  | { type: "close-panel" }
+  | { type: "set-scenario"; patch: Partial<ScenarioControls> };
 
 export interface GuidedTourStep {
   id: string;
@@ -81,13 +88,16 @@ export const PHASE_2_TOUR_STEPS: GuidedTourStep[] = [
   },
   {
     id: "later-physics",
-    title: "Physics and operations come next",
+    title: "Precomputed engineering fields",
     narration:
-      "Wind, flood, video, logistics and robotics modes are already reachable so the story stays in one shell. Their full visualizations are later phases — no live NVIDIA inference runs here.",
+      "Structural, wind and flood modes visualize precomputed fields on this same project. PhysicsNeMo and Earth-2 are explained as workflows — no live NVIDIA inference runs in the browser.",
     targetMode: "wind",
-    cameraPreset: "street-flood",
+    cameraPreset: "overview",
     layerVisibility: designLayersOn,
-    scriptedAction: { type: "close-panel" },
+    scriptedAction: {
+      type: "set-scenario",
+      patch: { windSpeed: "design", windDirectionDeg: 0, windView: "particles" },
+    },
   },
   {
     id: "explore",

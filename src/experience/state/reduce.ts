@@ -1,15 +1,42 @@
 import { assertNever } from "@/lib/assert-never";
 
 import { DEFAULT_EXPERIENCE_STATE } from "./defaults";
-import type { ExperienceAction, ExperienceState } from "./types";
+import type { CameraPreset, ExperienceAction, ExperienceMode, ExperienceState } from "./types";
+
+function cameraForMode(mode: ExperienceMode): CameraPreset | null {
+  switch (mode) {
+    case "structure":
+      return "building";
+    case "wind":
+      return "overview";
+    case "flood":
+      return "street-flood";
+    case "overview":
+    case "bim":
+    case "video-ai":
+    case "logistics":
+    case "robotics":
+    case "reality":
+    case "twin":
+      return null;
+    default:
+      return assertNever(mode, "experience mode");
+  }
+}
 
 export function reduceExperience(
   state: ExperienceState,
   action: ExperienceAction,
 ): ExperienceState {
   switch (action.type) {
-    case "SET_MODE":
-      return { ...state, mode: action.mode };
+    case "SET_MODE": {
+      const cameraPreset = cameraForMode(action.mode);
+      return {
+        ...state,
+        mode: action.mode,
+        ...(cameraPreset ? { cameraPreset } : {}),
+      };
+    }
     case "SELECT_ELEMENT":
       return { ...state, selectedElementId: action.elementId };
     case "SET_QUALITY":

@@ -29,7 +29,7 @@ import { structuralDatasetSchema } from "@/lib/data/schemas/structural";
 import { twinReplaySchema } from "@/lib/data/schemas/twin";
 import { videoEventIndexSchema } from "@/lib/data/schemas/video";
 import { weatherDatasetSchema } from "@/lib/data/schemas/weather";
-import { windDatasetSchema } from "@/lib/data/schemas/wind";
+import { windDatasetSchema, windManifestSchema } from "@/lib/data/schemas/wind";
 import { describe, expect, it } from "vitest";
 
 const root = path.resolve(import.meta.dirname, "../..");
@@ -44,19 +44,17 @@ describe("domain contracts", () => {
       bimDatasetSchema.parse(readPublicJson("data/bim/elements.json")).elements.length,
     ).toBeGreaterThanOrEqual(60);
     expect(
-      structuralDatasetSchema.parse(readPublicJson("data/structural/results.json")).loadCases[0]
-        .sourceType,
-    ).toBe("PRECOMPUTED");
+      structuralDatasetSchema.parse(readPublicJson("data/structural/results.json")).loadCases,
+    ).toHaveLength(3);
     expect(
-      windDatasetSchema.parse(readPublicJson("data/wind/manifest.json")).scenarios[0].speed,
-    ).toBe("design");
+      windManifestSchema.parse(readPublicJson("data/wind/manifest.json")).scenarios,
+    ).toHaveLength(6);
     expect(
       floodDatasetSchema.parse(readPublicJson("data/flood/scenarios.json")).scenarios,
-    ).toHaveLength(1);
+    ).toHaveLength(3);
     expect(
-      weatherDatasetSchema.parse(readPublicJson("data/weather/scenarios.json")).scenarios[0]
-        .sourceType,
-    ).toBe("WORKFLOW DEMO");
+      weatherDatasetSchema.parse(readPublicJson("data/weather/scenarios.json")).scenarios,
+    ).toHaveLength(3);
     expect(
       videoEventIndexSchema.parse(readPublicJson("data/video/events.json")).events[0].type,
     ).toBe("concrete_delivery");
@@ -102,16 +100,25 @@ describe("domain contracts", () => {
     );
     expect(
       structural.validate(readPublicJson("data/structural/results.json")).loadCases,
-    ).toHaveLength(1);
-    expect(wind.validate(readPublicJson("data/wind/manifest.json")).scenarios[0].id).toBe(
-      "design_0",
-    );
+    ).toHaveLength(3);
+    const windManifest = windManifestSchema.parse(readPublicJson("data/wind/manifest.json"));
+    expect(windManifest.scenarios[0].id).toBe("low_0");
     expect(
-      flood.validate(readPublicJson("data/flood/scenarios.json")).scenarios[0].rainfallMmH,
-    ).toBe(50);
+      wind.validate({
+        projectId: windManifest.projectId,
+        scenarios: windManifest.scenarios.map((ref) => readPublicJson(`data/wind/${ref.file}`)),
+      }).scenarios,
+    ).toHaveLength(6);
     expect(
-      weather.validate(readPublicJson("data/weather/scenarios.json")).scenarios[0].scenario,
-    ).toBe("SevereConvectiveDemo");
+      flood
+        .validate(readPublicJson("data/flood/scenarios.json"))
+        .scenarios.map((scenario) => scenario.rainfallMmH),
+    ).toEqual([20, 50, 100]);
+    expect(
+      weather
+        .validate(readPublicJson("data/weather/scenarios.json"))
+        .scenarios.map((item) => item.scenario),
+    ).toEqual(["LightRainDemo", "DesignStormDemo", "SevereConvectiveDemo"]);
     expect(video.validate(readPublicJson("data/video/events.json")).videoId).toBe(
       "site-cam-01-demo",
     );

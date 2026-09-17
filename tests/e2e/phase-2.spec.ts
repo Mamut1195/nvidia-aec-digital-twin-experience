@@ -79,7 +79,8 @@ test("BIM inspector, isolation, OpenUSD explainer, and later mode stubs", async 
   await windButton.click();
   await expect(page).toHaveURL(/\/experience\/?$/);
   await expect(page.getByRole("heading", { name: "Wind / Physics AI" })).toBeVisible();
-  await expect(page.getByTestId("context-panel")).toContainText("later phase");
+  await expect(page.getByTestId("wind-panel")).toBeVisible();
+  await expect(page.getByTestId("context-panel")).toContainText("PRECOMPUTED");
 });
 
 test("How NVIDIA Fits keeps authoring tools separate and links official docs", async ({ page }) => {
