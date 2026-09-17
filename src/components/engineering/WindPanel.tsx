@@ -5,6 +5,7 @@ import { ResultLegend } from "@/components/engineering/ResultLegend";
 import { PHYSICS_NEMO_TRUTH } from "@/content/engineering";
 import {
   WIND_DIRECTION_LABELS,
+  WIND_INFLOW_MS,
   WIND_SPEED_LABELS,
   WIND_VIEW_LABELS,
 } from "@/experience/engineering/labels";
@@ -17,7 +18,6 @@ import {
   experienceActions,
   useExperienceStore,
 } from "@/experience/state";
-import { WIND_INFLOW_MS } from "@/lib/data/wind/demo-wind";
 import { parseNumericUnion, parseUnion } from "@/lib/parse-union";
 
 export function WindPanel() {
@@ -26,6 +26,20 @@ export function WindPanel() {
   const view = useExperienceStore((state) => state.scenarioControls.windView);
   const pedestrian = useExperienceStore((state) => state.scenarioControls.windPedestrianOverlay);
   const { dataset, status, error } = useEnsureWindDataset();
+  if (!dataset) {
+    return (
+      <Panel title="Wind field">
+        <div className="flex flex-col gap-3" data-testid="wind-panel">
+          <StatusBadge status="PRECOMPUTED" />
+          {status === "error" ? (
+            <p className="text-xs text-alert">{error ?? "Wind dataset failed to load."}</p>
+          ) : (
+            <p className="text-xs text-muted">Loading precomputed wind field…</p>
+          )}
+        </div>
+      </Panel>
+    );
+  }
   const scenario = selectWindScenario(dataset, speed, direction);
   const pressureRange = windPressureRange(scenario);
 

@@ -5,23 +5,15 @@ import {
 } from "@/experience/scene/building-layout";
 import { BUILDING_AABB, BUILDING_HEIGHT_M } from "@/experience/scene/coordinates";
 import { PEDESTRIAN_ZONE_LAYOUT, WIND_REFERENCE_SOLVER } from "@/experience/scene/site-impact";
+import { WIND_INFLOW_MS } from "@/lib/data/wind/constants";
 import type {
   WindComfortLevel,
   WindDataset,
   WindManifest,
   WindScenario,
 } from "@/lib/data/schemas/wind";
-import { WIND_SPEEDS } from "@/lib/data/schemas/wind";
-
-type WindSpeed = (typeof WIND_SPEEDS)[number];
 
 const PROJECT_ID = "urban-construction-demonstrator";
-
-export const WIND_INFLOW_MS: Record<WindSpeed, number> = {
-  low: 6,
-  design: 12,
-  extreme: 22,
-};
 
 export const WIND_SCENARIO_SPECS = [
   { id: "low_0", speed: "low", directionDeg: 0, file: "low_0.json" },

@@ -21,7 +21,7 @@ export function StructuralOverlay() {
   const isolatedDiscipline = useExperienceStore((state) => state.isolatedDiscipline);
   const { dataset } = useEnsureStructuralDataset();
 
-  if (mode !== "structure") {
+  if (mode !== "structure" || !dataset) {
     return null;
   }
 

@@ -1,5 +1,6 @@
 import type { StructuralResultType } from "@/experience/state/types";
 import { assertNever } from "@/lib/assert-never";
+import { WIND_INFLOW_MS } from "@/lib/data/wind/constants";
 
 export const STRUCTURAL_LOAD_CASE_LABELS = {
   gravity: "Gravity",
@@ -18,6 +19,8 @@ export const STRUCTURAL_RESULT_UNITS: Record<StructuralResultType, string> = {
   utilization: "",
   "axial-force": "kN",
 };
+
+export { WIND_INFLOW_MS };
 
 export const WIND_SPEED_LABELS = {
   low: "Low",

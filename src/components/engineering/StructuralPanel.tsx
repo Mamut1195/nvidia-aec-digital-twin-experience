@@ -31,6 +31,19 @@ export function StructuralPanel() {
   );
   const selectedElementId = useExperienceStore((state) => state.selectedElementId);
   const { dataset, status, error } = useEnsureStructuralDataset();
+  if (!dataset) {
+    return (
+      <Panel title="Structural results">
+        <div className="flex flex-col gap-3" data-testid="structural-panel">
+          {status === "error" ? (
+            <p className="text-xs text-alert">{error ?? "Structural dataset failed to load."}</p>
+          ) : (
+            <p className="text-xs text-muted">Loading precomputed structural field…</p>
+          )}
+        </div>
+      </Panel>
+    );
+  }
   const loadCase = selectStructuralLoadCase(dataset, loadCaseId);
   const range = structuralRange(loadCase, resultType);
   const selected = findStructuralResult(loadCase, selectedElementId);

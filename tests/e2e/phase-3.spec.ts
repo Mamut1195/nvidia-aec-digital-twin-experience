@@ -19,6 +19,7 @@ test("structural heatmap, selectors, inspectable values, and not-a-design-check 
   await modeButton(page, testInfo, /Structural/, "Structure").click();
   await expect(page.getByRole("heading", { name: "Structural" })).toBeVisible();
   await page.getByTestId("structural-panel").scrollIntoViewIfNeeded();
+  await expect(page.getByTestId("structural-load-case")).toBeVisible({ timeout: 15_000 });
   await expect(page.getByTestId("structural-panel")).toBeVisible();
   await expect(page.getByTestId("structural-disclaimer")).toContainText("not a design check");
   await expect(page.getByTestId("structural-disclaimer")).toContainText("Illustrative");
@@ -50,6 +51,7 @@ test("wind particles, facade pressure, pedestrian overlay, PRECOMPUTED, PhysicsN
   await expect(page.getByTestId("scene-ready")).toBeVisible({ timeout: 20_000 });
   await modeButton(page, testInfo, /Wind \/ Physics AI/, "Wind").click();
   await page.getByTestId("wind-panel").scrollIntoViewIfNeeded();
+  await expect(page.getByTestId("wind-scenario-id")).toBeVisible({ timeout: 15_000 });
   await expect(page.getByTestId("wind-panel")).toBeVisible();
   await expect(page.getByTestId("wind-panel").getByText("PRECOMPUTED")).toBeVisible();
   await expect(page.getByTestId("wind-scenario-id")).toHaveText("design_0");
@@ -86,6 +88,7 @@ test("flood surface, weather WORKFLOW DEMO, timeline reset, Earth-2 explainer", 
   await expect(page.getByTestId("scene-ready")).toBeVisible({ timeout: 20_000 });
   await modeButton(page, testInfo, /Flood \/ Earth-2/, "Flood").click();
   await page.getByTestId("flood-panel").scrollIntoViewIfNeeded();
+  await expect(page.getByTestId("flood-rainfall")).toBeVisible({ timeout: 15_000 });
   await expect(page.getByTestId("flood-panel")).toBeVisible();
   await expect(page.getByTestId("weather-source")).toHaveText("WORKFLOW DEMO");
   await expect(page.getByTestId("flood-legend")).toBeVisible();

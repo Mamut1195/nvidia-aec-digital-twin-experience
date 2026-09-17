@@ -22,6 +22,9 @@ export function EngineeringHud() {
   const flood = useEnsureFloodDataset();
 
   if (mode === "structure") {
+    if (!structural.dataset) {
+      return null;
+    }
     const loadCase = selectStructuralLoadCase(structural.dataset, scenario.structuralLoadCase);
     const range = structuralRange(loadCase, scenario.structuralResultType);
     return (
@@ -43,6 +46,9 @@ export function EngineeringHud() {
   }
 
   if (mode === "wind") {
+    if (!wind.dataset) {
+      return null;
+    }
     const windScenario = selectWindScenario(
       wind.dataset,
       scenario.windSpeed,
@@ -72,6 +78,9 @@ export function EngineeringHud() {
   }
 
   if (mode === "flood") {
+    if (!flood.dataset) {
+      return null;
+    }
     const floodScenario = selectFloodScenario(flood.dataset, scenario.floodRainfallMmH);
     const step = interpolateFloodStep(floodScenario, scenario.floodTimeMinutes);
     const range = floodDepthRange(step);

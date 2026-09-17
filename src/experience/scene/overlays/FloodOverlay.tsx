@@ -48,16 +48,19 @@ export function FloodOverlay() {
   const rainfall = useExperienceStore((state) => state.scenarioControls.floodRainfallMmH);
   const timeMinutes = useExperienceStore((state) => state.scenarioControls.floodTimeMinutes);
   const { dataset } = useEnsureFloodDataset();
-  const scenario = selectFloodScenario(dataset, rainfall);
-  const step = interpolateFloodStep(scenario, timeMinutes);
+  const scenario = dataset ? selectFloodScenario(dataset, rainfall) : null;
+  const step = scenario ? interpolateFloodStep(scenario, timeMinutes) : null;
   const geometry = useMemo(() => new BufferGeometry(), []);
   const geometryRef = useRef(geometry);
 
   useLayoutEffect(() => {
+    if (!scenario || !step) {
+      return;
+    }
     applyFloodGeometry(geometryRef.current, scenario.grid, step);
-  }, [scenario.grid, step]);
+  }, [scenario, step]);
 
-  if (mode !== "flood") {
+  if (mode !== "flood" || !scenario || !step) {
     return null;
   }
 

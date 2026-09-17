@@ -2,19 +2,18 @@ import { useEffect } from "react";
 import { create } from "zustand";
 
 interface CatalogState<T> {
-  dataset: T;
+  dataset: T | null;
   status: "idle" | "ready" | "error";
   error: string | null;
   load: () => Promise<void>;
 }
 
 export function createDatasetCatalog<T>(options: {
-  initial: T;
   load: () => Promise<T>;
   failedMessage: string;
 }) {
   const useCatalog = create<CatalogState<T>>((set, get) => ({
-    dataset: options.initial,
+    dataset: null,
     status: "idle",
     error: null,
     async load() {

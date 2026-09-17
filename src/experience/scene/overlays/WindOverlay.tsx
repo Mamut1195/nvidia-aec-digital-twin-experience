@@ -134,16 +134,15 @@ export function WindOverlay() {
   const pedestrian = useExperienceStore((state) => state.scenarioControls.windPedestrianOverlay);
   const { dataset } = useEnsureWindDataset();
   const quality = useSceneQuality();
-  const scenario = selectWindScenario(dataset, speed, direction);
-  const streamlines = useMemo(() => buildStreamlines(scenario), [scenario]);
-  const range = windPressureRange(scenario);
+  const scenario = dataset ? selectWindScenario(dataset, speed, direction) : null;
+  const streamlines = useMemo(() => (scenario ? buildStreamlines(scenario) : []), [scenario]);
+  const range = scenario ? windPressureRange(scenario) : { min: 0, max: 1 };
   const panels = useMemo(() => [...getSouthFacadePanels(), ...getEastFacadePanels()], []);
   const pressureById = useMemo(() => {
-    const map = new Map(scenario.facadePressures.map((panel) => [panel.panelId, panel.pressure]));
-    return map;
+    return new Map(scenario?.facadePressures.map((panel) => [panel.panelId, panel.pressure]) ?? []);
   }, [scenario]);
 
-  if (mode !== "wind") {
+  if (mode !== "wind" || !scenario) {
     return null;
   }
 

@@ -26,6 +26,22 @@ export function FloodPanel() {
   const timeMinutes = useExperienceStore((state) => state.scenarioControls.floodTimeMinutes);
   const { dataset, status, error } = useEnsureFloodDataset();
   const weather = useEnsureWeatherDataset();
+  if (!dataset || !weather.dataset) {
+    return (
+      <Panel title="Flood timeline">
+        <div className="flex flex-col gap-3" data-testid="flood-panel">
+          <StatusBadge status="PRECOMPUTED" />
+          {status === "error" || weather.status === "error" ? (
+            <p className="text-xs text-alert">
+              {error ?? weather.error ?? "Flood dataset failed to load."}
+            </p>
+          ) : (
+            <p className="text-xs text-muted">Loading precomputed flood surface…</p>
+          )}
+        </div>
+      </Panel>
+    );
+  }
   const scenario = selectFloodScenario(dataset, rainfall);
   const weatherCard = selectWeatherScenario(weather.dataset, rainfall);
   const maxTime = floodMaxTime(scenario);
