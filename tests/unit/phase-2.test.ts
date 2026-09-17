@@ -137,7 +137,10 @@ describe("AECN-021 / AECN-023 catalog", () => {
     expect(EXPERIENCE_MODES).toHaveLength(10);
     expect(MODE_CATALOG.overview.availability).toBe("ready");
     expect(MODE_CATALOG.bim.availability).toBe("ready");
-    expect(MODE_CATALOG.wind.availability).toBe("later");
+    expect(MODE_CATALOG.structure.availability).toBe("ready");
+    expect(MODE_CATALOG.wind.availability).toBe("ready");
+    expect(MODE_CATALOG.flood.availability).toBe("ready");
+    expect(MODE_CATALOG["video-ai"].availability).toBe("later");
     experienceActions.setMode("robotics");
     expect(getExperienceSnapshot().mode).toBe("robotics");
     experienceActions.reset();

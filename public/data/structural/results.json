@@ -7,11 +7,1701 @@
       "disclaimer": "Illustrative structural-result field — not a design check.",
       "results": [
         {
+          "elementId": "STR-COL-L01-A1",
+          "displacement": 0.0029,
+          "utilization": 0.718,
+          "axialForce": -2295.6,
+          "displacementVector": [
+            0,
+            -0.0029,
+            0
+          ]
+        },
+        {
           "elementId": "STR-COL-L01-C01",
-          "displacement": 0.004,
-          "utilization": 0.42,
-          "axialForce": -1250,
-          "displacementVector": [0, -0.004, 0]
+          "displacement": 0.0031,
+          "utilization": 0.725,
+          "axialForce": -2302.1,
+          "displacementVector": [
+            0,
+            -0.0031,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-F1",
+          "displacement": 0.0029,
+          "utilization": 0.717,
+          "axialForce": -2294.9,
+          "displacementVector": [
+            0,
+            -0.0029,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-A5",
+          "displacement": 0.0031,
+          "utilization": 0.711,
+          "axialForce": -2288.2,
+          "displacementVector": [
+            0,
+            -0.0031,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-F5",
+          "displacement": 0.0031,
+          "utilization": 0.71,
+          "axialForce": -2287.9,
+          "displacementVector": [
+            0,
+            -0.0031,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-B2",
+          "displacement": 0.0044,
+          "utilization": 0.676,
+          "axialForce": -2088.7,
+          "displacementVector": [
+            0,
+            -0.0044,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-D3",
+          "displacement": 0.0044,
+          "utilization": 0.678,
+          "axialForce": -2090.4,
+          "displacementVector": [
+            0,
+            -0.0044,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-E4",
+          "displacement": 0.0044,
+          "utilization": 0.677,
+          "axialForce": -2089.7,
+          "displacementVector": [
+            0,
+            -0.0044,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-A1",
+          "displacement": 0.0058,
+          "utilization": 0.634,
+          "axialForce": -1881.5,
+          "displacementVector": [
+            0,
+            -0.0058,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-C3",
+          "displacement": 0.0057,
+          "utilization": 0.624,
+          "axialForce": -1871.2,
+          "displacementVector": [
+            0,
+            -0.0057,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-F5",
+          "displacement": 0.0057,
+          "utilization": 0.626,
+          "axialForce": -1873.3,
+          "displacementVector": [
+            0,
+            -0.0057,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-C3",
+          "displacement": 0.007,
+          "utilization": 0.583,
+          "axialForce": -1665.8,
+          "displacementVector": [
+            0,
+            -0.007,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-A5",
+          "displacement": 0.0072,
+          "utilization": 0.59,
+          "axialForce": -1672,
+          "displacementVector": [
+            0,
+            -0.0072,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-F1",
+          "displacement": 0.0071,
+          "utilization": 0.588,
+          "axialForce": -1670.5,
+          "displacementVector": [
+            0,
+            -0.0071,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L05-B1",
+          "displacement": 0.0085,
+          "utilization": 0.541,
+          "axialForce": -1458.1,
+          "displacementVector": [
+            0,
+            -0.0085,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L05-E5",
+          "displacement": 0.0085,
+          "utilization": 0.541,
+          "axialForce": -1458.4,
+          "displacementVector": [
+            0,
+            -0.0085,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L06-D2",
+          "displacement": 0.0099,
+          "utilization": 0.497,
+          "axialForce": -1249.2,
+          "displacementVector": [
+            0,
+            -0.0099,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L06-C4",
+          "displacement": 0.0098,
+          "utilization": 0.496,
+          "axialForce": -1248.2,
+          "displacementVector": [
+            0,
+            -0.0098,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L07-A3",
+          "displacement": 0.0112,
+          "utilization": 0.444,
+          "axialForce": -1031.9,
+          "displacementVector": [
+            0,
+            -0.0112,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L07-F3",
+          "displacement": 0.0113,
+          "utilization": 0.453,
+          "axialForce": -1040.9,
+          "displacementVector": [
+            0,
+            -0.0113,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-X-A1",
+          "displacement": 0.0035,
+          "utilization": 0.194,
+          "axialForce": 30.9,
+          "displacementVector": [
+            0,
+            -0.0035,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-Z-A1",
+          "displacement": 0.0034,
+          "utilization": 0.204,
+          "axialForce": 38,
+          "displacementVector": [
+            0,
+            -0.0034,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-X-E1",
+          "displacement": 0.0035,
+          "utilization": 0.195,
+          "axialForce": 31.6,
+          "displacementVector": [
+            0,
+            -0.0035,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L02-X-C3",
+          "displacement": 0.0048,
+          "utilization": 0.228,
+          "axialForce": 37.3,
+          "displacementVector": [
+            0,
+            -0.0048,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L02-Z-B1",
+          "displacement": 0.0048,
+          "utilization": 0.225,
+          "axialForce": 35,
+          "displacementVector": [
+            0,
+            -0.0048,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L03-X-B2",
+          "displacement": 0.0062,
+          "utilization": 0.248,
+          "axialForce": 33.8,
+          "displacementVector": [
+            0,
+            -0.0062,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L03-Z-D3",
+          "displacement": 0.0061,
+          "utilization": 0.252,
+          "axialForce": 36.8,
+          "displacementVector": [
+            0,
+            -0.0061,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-X-E5",
+          "displacement": 0.0077,
+          "utilization": 0.283,
+          "axialForce": 40.8,
+          "displacementVector": [
+            0,
+            -0.0077,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-Z-F2",
+          "displacement": 0.0076,
+          "utilization": 0.279,
+          "axialForce": 38.2,
+          "displacementVector": [
+            0,
+            -0.0076,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-X-C2",
+          "displacement": 0.0076,
+          "utilization": 0.272,
+          "axialForce": 32.5,
+          "displacementVector": [
+            0,
+            -0.0076,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L05-X-A4",
+          "displacement": 0.0089,
+          "utilization": 0.304,
+          "axialForce": 37.9,
+          "displacementVector": [
+            0,
+            -0.0089,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L06-Z-C4",
+          "displacement": 0.0103,
+          "utilization": 0.324,
+          "axialForce": 34.4,
+          "displacementVector": [
+            0,
+            -0.0103,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L07-X-D1",
+          "displacement": 0.0117,
+          "utilization": 0.347,
+          "axialForce": 32.8,
+          "displacementVector": [
+            0,
+            -0.0117,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L08-X-B3",
+          "displacement": 0.0131,
+          "utilization": 0.374,
+          "axialForce": 34.1,
+          "displacementVector": [
+            0,
+            -0.0131,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L08-Z-A2",
+          "displacement": 0.0131,
+          "utilization": 0.373,
+          "axialForce": 33.7,
+          "displacementVector": [
+            0,
+            -0.0131,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L00",
+          "displacement": 0.0022,
+          "utilization": 0.18,
+          "axialForce": 36,
+          "displacementVector": [
+            0,
+            -0.0022,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L01",
+          "displacement": 0.0035,
+          "utilization": 0.203,
+          "axialForce": 35.4,
+          "displacementVector": [
+            0,
+            -0.0035,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L02",
+          "displacement": 0.0049,
+          "utilization": 0.228,
+          "axialForce": 35.5,
+          "displacementVector": [
+            0,
+            -0.0049,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L03",
+          "displacement": 0.0064,
+          "utilization": 0.259,
+          "axialForce": 39.4,
+          "displacementVector": [
+            0,
+            -0.0064,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L04",
+          "displacement": 0.0078,
+          "utilization": 0.284,
+          "axialForce": 39.4,
+          "displacementVector": [
+            0,
+            -0.0078,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L05",
+          "displacement": 0.0092,
+          "utilization": 0.31,
+          "axialForce": 40.3,
+          "displacementVector": [
+            0,
+            -0.0092,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L06",
+          "displacement": 0.0104,
+          "utilization": 0.329,
+          "axialForce": 36,
+          "displacementVector": [
+            0,
+            -0.0104,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L07",
+          "displacement": 0.0119,
+          "utilization": 0.359,
+          "axialForce": 40,
+          "displacementVector": [
+            0,
+            -0.0119,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L08",
+          "displacement": 0.0132,
+          "utilization": 0.375,
+          "axialForce": 33.2,
+          "displacementVector": [
+            0,
+            -0.0132,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-ROOF",
+          "displacement": 0.0132,
+          "utilization": 0.382,
+          "axialForce": 37.3,
+          "displacementVector": [
+            0,
+            -0.0132,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-N",
+          "displacement": 0.0078,
+          "utilization": 0.395,
+          "axialForce": -403.1,
+          "displacementVector": [
+            0,
+            -0.0078,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-S",
+          "displacement": 0.0078,
+          "utilization": 0.386,
+          "axialForce": -397.6,
+          "displacementVector": [
+            0,
+            -0.0078,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-W",
+          "displacement": 0.0078,
+          "utilization": 0.386,
+          "axialForce": -397.4,
+          "displacementVector": [
+            0,
+            -0.0078,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-E",
+          "displacement": 0.0079,
+          "utilization": 0.396,
+          "axialForce": -404.1,
+          "displacementVector": [
+            0,
+            -0.0079,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-WALL-L02-INT",
+          "displacement": 0.0044,
+          "utilization": 0.455,
+          "axialForce": -397.6,
+          "displacementVector": [
+            0,
+            -0.0044,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-WALL-L04-INT",
+          "displacement": 0.0071,
+          "utilization": 0.402,
+          "axialForce": -398.8,
+          "displacementVector": [
+            0,
+            -0.0071,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "loadCase": "lateral-x",
+      "sourceType": "PRECOMPUTED",
+      "disclaimer": "Illustrative structural-result field — not a design check.",
+      "results": [
+        {
+          "elementId": "STR-COL-L01-A1",
+          "displacement": 0.0102,
+          "utilization": 0.454,
+          "axialForce": -218.7,
+          "displacementVector": [
+            0.0102,
+            -0.0018,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-C01",
+          "displacement": 0.0055,
+          "utilization": 0.284,
+          "axialForce": -218.7,
+          "displacementVector": [
+            0.0055,
+            -0.001,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-F1",
+          "displacement": 0.0102,
+          "utilization": 0.462,
+          "axialForce": 218.8,
+          "displacementVector": [
+            0.0102,
+            -0.0018,
+            0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-A5",
+          "displacement": 0.0101,
+          "utilization": 0.458,
+          "axialForce": -218.7,
+          "displacementVector": [
+            0.0101,
+            -0.0018,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-F5",
+          "displacement": 0.0101,
+          "utilization": 0.458,
+          "axialForce": 218.8,
+          "displacementVector": [
+            0.0101,
+            -0.0018,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-B2",
+          "displacement": 0.0111,
+          "utilization": 0.416,
+          "axialForce": -296.2,
+          "displacementVector": [
+            0.0111,
+            -0.002,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-D3",
+          "displacement": 0.0087,
+          "utilization": 0.331,
+          "axialForce": 296.3,
+          "displacementVector": [
+            0.0087,
+            -0.0016,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-E4",
+          "displacement": 0.011,
+          "utilization": 0.417,
+          "axialForce": 296.3,
+          "displacementVector": [
+            0.011,
+            -0.002,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-A1",
+          "displacement": 0.0181,
+          "utilization": 0.559,
+          "axialForce": -373.7,
+          "displacementVector": [
+            0.0181,
+            -0.0033,
+            0.0002
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-C3",
+          "displacement": 0.0134,
+          "utilization": 0.378,
+          "axialForce": -373.7,
+          "displacementVector": [
+            0.0134,
+            -0.0024,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-F5",
+          "displacement": 0.018,
+          "utilization": 0.555,
+          "axialForce": 373.8,
+          "displacementVector": [
+            0.018,
+            -0.0032,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-C3",
+          "displacement": 0.0192,
+          "utilization": 0.432,
+          "axialForce": -451.3,
+          "displacementVector": [
+            0.0192,
+            -0.0035,
+            0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-A5",
+          "displacement": 0.0239,
+          "utilization": 0.604,
+          "axialForce": -451.3,
+          "displacementVector": [
+            0.0239,
+            -0.0043,
+            0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-F1",
+          "displacement": 0.0238,
+          "utilization": 0.601,
+          "axialForce": 451.3,
+          "displacementVector": [
+            0.0238,
+            -0.0043,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L05-B1",
+          "displacement": 0.0284,
+          "utilization": 0.561,
+          "axialForce": -528.7,
+          "displacementVector": [
+            0.0284,
+            -0.0051,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L05-E5",
+          "displacement": 0.0284,
+          "utilization": 0.56,
+          "axialForce": 528.8,
+          "displacementVector": [
+            0.0284,
+            -0.0051,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L06-D2",
+          "displacement": 0.0339,
+          "utilization": 0.528,
+          "axialForce": 606.3,
+          "displacementVector": [
+            0.0339,
+            -0.0061,
+            0.0002
+          ]
+        },
+        {
+          "elementId": "STR-COL-L06-C4",
+          "displacement": 0.0339,
+          "utilization": 0.527,
+          "axialForce": -606.2,
+          "displacementVector": [
+            0.0339,
+            -0.0061,
+            0.0001
+          ]
+        },
+        {
+          "elementId": "STR-COL-L07-A3",
+          "displacement": 0.0471,
+          "utilization": 0.743,
+          "axialForce": -683.7,
+          "displacementVector": [
+            0.0471,
+            -0.0085,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-COL-L07-F3",
+          "displacement": 0.0472,
+          "utilization": 0.739,
+          "axialForce": 683.8,
+          "displacementVector": [
+            0.0472,
+            -0.0085,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-X-A1",
+          "displacement": 0.0098,
+          "utilization": 0.433,
+          "axialForce": 24.4,
+          "displacementVector": [
+            0.0098,
+            -0.0018,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-Z-A1",
+          "displacement": 0.011,
+          "utilization": 0.474,
+          "axialForce": 23.6,
+          "displacementVector": [
+            0.011,
+            -0.002,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-X-E1",
+          "displacement": 0.0099,
+          "utilization": 0.431,
+          "axialForce": 23.4,
+          "displacementVector": [
+            0.0099,
+            -0.0018,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L02-X-C3",
+          "displacement": 0.0089,
+          "utilization": 0.308,
+          "axialForce": 24.2,
+          "displacementVector": [
+            0.0089,
+            -0.0016,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L02-Z-B1",
+          "displacement": 0.0126,
+          "utilization": 0.431,
+          "axialForce": 21.7,
+          "displacementVector": [
+            0.0126,
+            -0.0023,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L03-X-B2",
+          "displacement": 0.0165,
+          "utilization": 0.437,
+          "axialForce": 22.3,
+          "displacementVector": [
+            0.0165,
+            -0.003,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L03-Z-D3",
+          "displacement": 0.0154,
+          "utilization": 0.393,
+          "axialForce": 21.7,
+          "displacementVector": [
+            0.0154,
+            -0.0028,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-X-E5",
+          "displacement": 0.025,
+          "utilization": 0.574,
+          "axialForce": 23.6,
+          "displacementVector": [
+            0.025,
+            -0.0045,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-Z-F2",
+          "displacement": 0.0262,
+          "utilization": 0.615,
+          "axialForce": 23,
+          "displacementVector": [
+            0.0262,
+            -0.0047,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-X-C2",
+          "displacement": 0.0203,
+          "utilization": 0.403,
+          "axialForce": 24.1,
+          "displacementVector": [
+            0.0203,
+            -0.0037,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L05-X-A4",
+          "displacement": 0.0323,
+          "utilization": 0.619,
+          "axialForce": 22.6,
+          "displacementVector": [
+            0.0323,
+            -0.0058,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L06-Z-C4",
+          "displacement": 0.0367,
+          "utilization": 0.542,
+          "axialForce": 24.2,
+          "displacementVector": [
+            0.0367,
+            -0.0066,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L07-X-D1",
+          "displacement": 0.0469,
+          "utilization": 0.627,
+          "axialForce": 22.3,
+          "displacementVector": [
+            0.0469,
+            -0.0084,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L08-X-B3",
+          "displacement": 0.0565,
+          "utilization": 0.682,
+          "axialForce": 25.2,
+          "displacementVector": [
+            0.0565,
+            -0.0102,
+            0.0001
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L08-Z-A2",
+          "displacement": 0.0599,
+          "utilization": 0.807,
+          "axialForce": 23.6,
+          "displacementVector": [
+            0.0599,
+            -0.0108,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L00",
+          "displacement": 0.0036,
+          "utilization": 0.218,
+          "axialForce": 23,
+          "displacementVector": [
+            0.0036,
+            -0.0006,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L01",
+          "displacement": 0.0054,
+          "utilization": 0.266,
+          "axialForce": 24,
+          "displacementVector": [
+            0.0054,
+            -0.001,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L02",
+          "displacement": 0.0096,
+          "utilization": 0.308,
+          "axialForce": 21.9,
+          "displacementVector": [
+            0.0096,
+            -0.0017,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L03",
+          "displacement": 0.0148,
+          "utilization": 0.365,
+          "axialForce": 25.7,
+          "displacementVector": [
+            0.0148,
+            -0.0027,
+            0.0002
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L04",
+          "displacement": 0.0211,
+          "utilization": 0.406,
+          "axialForce": 23,
+          "displacementVector": [
+            0.0211,
+            -0.0038,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L05",
+          "displacement": 0.0284,
+          "utilization": 0.459,
+          "axialForce": 25.4,
+          "displacementVector": [
+            0.0284,
+            -0.0051,
+            0.0001
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L06",
+          "displacement": 0.0366,
+          "utilization": 0.5,
+          "axialForce": 22.7,
+          "displacementVector": [
+            0.0366,
+            -0.0066,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L07",
+          "displacement": 0.0456,
+          "utilization": 0.555,
+          "axialForce": 25.7,
+          "displacementVector": [
+            0.0456,
+            -0.0082,
+            0.0002
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L08",
+          "displacement": 0.0553,
+          "utilization": 0.593,
+          "axialForce": 22,
+          "displacementVector": [
+            0.0553,
+            -0.01,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-ROOF",
+          "displacement": 0.0556,
+          "utilization": 0.597,
+          "axialForce": 22.9,
+          "displacementVector": [
+            0.0556,
+            -0.01,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-N",
+          "displacement": 0.0213,
+          "utilization": 0.41,
+          "axialForce": 24.1,
+          "displacementVector": [
+            0.0213,
+            -0.0038,
+            0
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-S",
+          "displacement": 0.0214,
+          "utilization": 0.407,
+          "axialForce": 22.8,
+          "displacementVector": [
+            0.0214,
+            -0.0039,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-W",
+          "displacement": 0.0226,
+          "utilization": 0.448,
+          "axialForce": 22.1,
+          "displacementVector": [
+            0.0226,
+            -0.0041,
+            -0.0002
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-E",
+          "displacement": 0.0226,
+          "utilization": 0.458,
+          "axialForce": 25.9,
+          "displacementVector": [
+            0.0226,
+            -0.0041,
+            0.0002
+          ]
+        },
+        {
+          "elementId": "STR-WALL-L02-INT",
+          "displacement": 0.0104,
+          "utilization": 0.396,
+          "axialForce": 22.9,
+          "displacementVector": [
+            0.0104,
+            -0.0019,
+            -0.0001
+          ]
+        },
+        {
+          "elementId": "STR-WALL-L04-INT",
+          "displacement": 0.0209,
+          "utilization": 0.494,
+          "axialForce": 24.1,
+          "displacementVector": [
+            0.0209,
+            -0.0038,
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "loadCase": "lateral-y",
+      "sourceType": "PRECOMPUTED",
+      "disclaimer": "Illustrative structural-result field — not a design check.",
+      "results": [
+        {
+          "elementId": "STR-COL-L01-A1",
+          "displacement": 0.0109,
+          "utilization": 0.451,
+          "axialForce": -196.2,
+          "displacementVector": [
+            -0.0002,
+            -0.0017,
+            0.0109
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-C01",
+          "displacement": 0.0108,
+          "utilization": 0.452,
+          "axialForce": -196.2,
+          "displacementVector": [
+            -0.0001,
+            -0.0017,
+            0.0108
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-F1",
+          "displacement": 0.0108,
+          "utilization": 0.458,
+          "axialForce": -196.2,
+          "displacementVector": [
+            0.0001,
+            -0.0017,
+            0.0108
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-A5",
+          "displacement": 0.0107,
+          "utilization": 0.455,
+          "axialForce": 196.3,
+          "displacementVector": [
+            0,
+            -0.0017,
+            0.0107
+          ]
+        },
+        {
+          "elementId": "STR-COL-L01-F5",
+          "displacement": 0.0108,
+          "utilization": 0.454,
+          "axialForce": 196.3,
+          "displacementVector": [
+            0,
+            -0.0017,
+            0.0108
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-B2",
+          "displacement": 0.0107,
+          "utilization": 0.379,
+          "axialForce": -268.7,
+          "displacementVector": [
+            -0.0002,
+            -0.0017,
+            0.0107
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-D3",
+          "displacement": 0.0072,
+          "utilization": 0.264,
+          "axialForce": 268.8,
+          "displacementVector": [
+            -0.0001,
+            -0.0012,
+            0.0072
+          ]
+        },
+        {
+          "elementId": "STR-COL-L02-E4",
+          "displacement": 0.0106,
+          "utilization": 0.38,
+          "axialForce": 268.8,
+          "displacementVector": [
+            -0.0001,
+            -0.0017,
+            0.0106
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-A1",
+          "displacement": 0.0186,
+          "utilization": 0.55,
+          "axialForce": -341.2,
+          "displacementVector": [
+            0.0002,
+            -0.003,
+            0.0186
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-C3",
+          "displacement": 0.0117,
+          "utilization": 0.308,
+          "axialForce": 341.3,
+          "displacementVector": [
+            -0.0002,
+            -0.0019,
+            0.0117
+          ]
+        },
+        {
+          "elementId": "STR-COL-L03-F5",
+          "displacement": 0.0184,
+          "utilization": 0.546,
+          "axialForce": 341.3,
+          "displacementVector": [
+            0,
+            -0.0029,
+            0.0184
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-C3",
+          "displacement": 0.0172,
+          "utilization": 0.36,
+          "axialForce": 413.8,
+          "displacementVector": [
+            0.0001,
+            -0.0028,
+            0.0172
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-A5",
+          "displacement": 0.024,
+          "utilization": 0.592,
+          "axialForce": 413.8,
+          "displacementVector": [
+            0.0001,
+            -0.0038,
+            0.024
+          ]
+        },
+        {
+          "elementId": "STR-COL-L04-F1",
+          "displacement": 0.0239,
+          "utilization": 0.589,
+          "axialForce": -413.7,
+          "displacementVector": [
+            0,
+            -0.0038,
+            0.0239
+          ]
+        },
+        {
+          "elementId": "STR-COL-L05-B1",
+          "displacement": 0.0303,
+          "utilization": 0.633,
+          "axialForce": -486.2,
+          "displacementVector": [
+            -0.0001,
+            -0.0048,
+            0.0303
+          ]
+        },
+        {
+          "elementId": "STR-COL-L05-E5",
+          "displacement": 0.0303,
+          "utilization": 0.633,
+          "axialForce": 486.3,
+          "displacementVector": [
+            -0.0001,
+            -0.0048,
+            0.0303
+          ]
+        },
+        {
+          "elementId": "STR-COL-L06-D2",
+          "displacement": 0.0341,
+          "utilization": 0.568,
+          "axialForce": -558.7,
+          "displacementVector": [
+            0.0002,
+            -0.0055,
+            0.0341
+          ]
+        },
+        {
+          "elementId": "STR-COL-L06-C4",
+          "displacement": 0.0341,
+          "utilization": 0.566,
+          "axialForce": 558.8,
+          "displacementVector": [
+            0.0001,
+            -0.0055,
+            0.0341
+          ]
+        },
+        {
+          "elementId": "STR-COL-L07-A3",
+          "displacement": 0.0384,
+          "utilization": 0.492,
+          "axialForce": 631.3,
+          "displacementVector": [
+            0,
+            -0.0061,
+            0.0384
+          ]
+        },
+        {
+          "elementId": "STR-COL-L07-F3",
+          "displacement": 0.0385,
+          "utilization": 0.488,
+          "axialForce": 631.3,
+          "displacementVector": [
+            -0.0002,
+            -0.0062,
+            0.0385
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-X-A1",
+          "displacement": 0.0117,
+          "utilization": 0.472,
+          "axialForce": 20.4,
+          "displacementVector": [
+            0,
+            -0.0019,
+            0.0117
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-Z-A1",
+          "displacement": 0.01,
+          "utilization": 0.412,
+          "axialForce": 19.6,
+          "displacementVector": [
+            0,
+            -0.0016,
+            0.01
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L01-X-E1",
+          "displacement": 0.0117,
+          "utilization": 0.469,
+          "axialForce": 19.5,
+          "displacementVector": [
+            -0.0001,
+            -0.0019,
+            0.0117
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L02-X-C3",
+          "displacement": 0.0086,
+          "utilization": 0.284,
+          "axialForce": 20.2,
+          "displacementVector": [
+            0,
+            -0.0014,
+            0.0086
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L02-Z-B1",
+          "displacement": 0.0139,
+          "utilization": 0.452,
+          "axialForce": 17.9,
+          "displacementVector": [
+            -0.0002,
+            -0.0022,
+            0.0139
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L03-X-B2",
+          "displacement": 0.017,
+          "utilization": 0.44,
+          "axialForce": 18.5,
+          "displacementVector": [
+            -0.0002,
+            -0.0027,
+            0.017
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L03-Z-D3",
+          "displacement": 0.0153,
+          "utilization": 0.381,
+          "axialForce": 17.9,
+          "displacementVector": [
+            -0.0002,
+            -0.0024,
+            0.0153
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-X-E5",
+          "displacement": 0.0261,
+          "utilization": 0.605,
+          "axialForce": 19.7,
+          "displacementVector": [
+            0,
+            -0.0042,
+            0.0261
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-Z-F2",
+          "displacement": 0.021,
+          "utilization": 0.429,
+          "axialForce": 19.1,
+          "displacementVector": [
+            -0.0001,
+            -0.0034,
+            0.021
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L04-X-C2",
+          "displacement": 0.0226,
+          "utilization": 0.49,
+          "axialForce": 20.1,
+          "displacementVector": [
+            0,
+            -0.0036,
+            0.0226
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L05-X-A4",
+          "displacement": 0.0294,
+          "utilization": 0.531,
+          "axialForce": 18.7,
+          "displacementVector": [
+            -0.0001,
+            -0.0047,
+            0.0294
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L06-Z-C4",
+          "displacement": 0.0383,
+          "utilization": 0.638,
+          "axialForce": 20.2,
+          "displacementVector": [
+            0,
+            -0.0061,
+            0.0383
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L07-X-D1",
+          "displacement": 0.0482,
+          "utilization": 0.736,
+          "axialForce": 18.4,
+          "displacementVector": [
+            -0.0002,
+            -0.0077,
+            0.0482
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L08-X-B3",
+          "displacement": 0.05,
+          "utilization": 0.556,
+          "axialForce": 21.1,
+          "displacementVector": [
+            0.0001,
+            -0.008,
+            0.05
+          ]
+        },
+        {
+          "elementId": "STR-BEAM-L08-Z-A2",
+          "displacement": 0.0516,
+          "utilization": 0.611,
+          "axialForce": 19.7,
+          "displacementVector": [
+            0,
+            -0.0083,
+            0.0516
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L00",
+          "displacement": 0.0033,
+          "utilization": 0.198,
+          "axialForce": 19.1,
+          "displacementVector": [
+            -0.0001,
+            -0.0005,
+            0.0033
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L01",
+          "displacement": 0.0052,
+          "utilization": 0.243,
+          "axialForce": 20,
+          "displacementVector": [
+            0,
+            -0.0008,
+            0.0052
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L02",
+          "displacement": 0.0092,
+          "utilization": 0.283,
+          "axialForce": 18.1,
+          "displacementVector": [
+            -0.0002,
+            -0.0015,
+            0.0092
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L03",
+          "displacement": 0.0142,
+          "utilization": 0.338,
+          "axialForce": 21.5,
+          "displacementVector": [
+            0.0002,
+            -0.0023,
+            0.0142
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L04",
+          "displacement": 0.02,
+          "utilization": 0.376,
+          "axialForce": 19.1,
+          "displacementVector": [
+            -0.0001,
+            -0.0032,
+            0.02
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L05",
+          "displacement": 0.0268,
+          "utilization": 0.427,
+          "axialForce": 21.3,
+          "displacementVector": [
+            0.0001,
+            -0.0043,
+            0.0268
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L06",
+          "displacement": 0.0342,
+          "utilization": 0.465,
+          "axialForce": 18.8,
+          "displacementVector": [
+            -0.0001,
+            -0.0055,
+            0.0342
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L07",
+          "displacement": 0.0423,
+          "utilization": 0.517,
+          "axialForce": 21.5,
+          "displacementVector": [
+            0.0002,
+            -0.0068,
+            0.0423
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-L08",
+          "displacement": 0.051,
+          "utilization": 0.553,
+          "axialForce": 18.2,
+          "displacementVector": [
+            -0.0002,
+            -0.0082,
+            0.051
+          ]
+        },
+        {
+          "elementId": "STR-SLAB-ROOF",
+          "displacement": 0.0513,
+          "utilization": 0.557,
+          "axialForce": 19,
+          "displacementVector": [
+            -0.0001,
+            -0.0082,
+            0.0513
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-N",
+          "displacement": 0.022,
+          "utilization": 0.442,
+          "axialForce": 20.1,
+          "displacementVector": [
+            0,
+            -0.0035,
+            0.022
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-S",
+          "displacement": 0.0221,
+          "utilization": 0.439,
+          "axialForce": 19,
+          "displacementVector": [
+            -0.0001,
+            -0.0035,
+            0.0221
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-W",
+          "displacement": 0.0204,
+          "utilization": 0.375,
+          "axialForce": 18.3,
+          "displacementVector": [
+            -0.0002,
+            -0.0033,
+            0.0204
+          ]
+        },
+        {
+          "elementId": "STR-CORE-W-E",
+          "displacement": 0.0204,
+          "utilization": 0.385,
+          "axialForce": 21.7,
+          "displacementVector": [
+            0.0002,
+            -0.0033,
+            0.0204
+          ]
+        },
+        {
+          "elementId": "STR-WALL-L02-INT",
+          "displacement": 0.0081,
+          "utilization": 0.296,
+          "axialForce": 19.1,
+          "displacementVector": [
+            -0.0001,
+            -0.0013,
+            0.0081
+          ]
+        },
+        {
+          "elementId": "STR-WALL-L04-INT",
+          "displacement": 0.018,
+          "utilization": 0.389,
+          "axialForce": 20.1,
+          "displacementVector": [
+            0,
+            -0.0029,
+            0.018
+          ]
         }
       ]
     }

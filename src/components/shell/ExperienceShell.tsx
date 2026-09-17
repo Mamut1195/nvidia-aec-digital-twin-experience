@@ -1,3 +1,6 @@
+import { Earth2Explainer } from "@/components/engineering/Earth2Explainer";
+import { EngineeringHud } from "@/components/engineering/EngineeringHud";
+import { PhysicsNemoExplainer } from "@/components/engineering/PhysicsNemoExplainer";
 import { HowNvidiaFits } from "@/components/ecosystem/HowNvidiaFits";
 import { OpenUsdExplainer } from "@/components/ecosystem/OpenUsdExplainer";
 import { AppFooter } from "@/components/shell/AppFooter";
@@ -7,6 +10,10 @@ import { ExperienceDrawer } from "@/components/shell/ExperienceDrawer";
 import { MobileModeBar, ModeRail } from "@/components/shell/ModeRail";
 import { TourNarration } from "@/components/tour/TourNarration";
 import { useEnsureBimDataset } from "@/experience/bim/use-bim-dataset";
+import { useEnsureFloodDataset } from "@/experience/engineering/use-flood-dataset";
+import { useEnsureStructuralDataset } from "@/experience/engineering/use-structural-dataset";
+import { useEnsureWeatherDataset } from "@/experience/engineering/use-weather-dataset";
+import { useEnsureWindDataset } from "@/experience/engineering/use-wind-dataset";
 import { ExperienceScene } from "@/experience/scene/ExperienceScene";
 import { stageStatusById } from "@/experience/scene/load-stages";
 import { useSceneBootstrap } from "@/experience/scene/use-scene-bootstrap";
@@ -14,6 +21,10 @@ import { useExperienceStore } from "@/experience/state";
 
 export function ExperienceShell() {
   useEnsureBimDataset();
+  useEnsureStructuralDataset();
+  useEnsureWindDataset();
+  useEnsureFloodDataset();
+  useEnsureWeatherDataset();
   const bootstrap = useSceneBootstrap();
   const openPanel = useExperienceStore((state) => state.openPanel);
   const optionalOverlay = bootstrap.report
@@ -30,6 +41,7 @@ export function ExperienceShell() {
         <ModeRail />
         <div className="relative min-h-0 min-w-0 flex-1">
           <ExperienceScene bootstrap={bootstrap} />
+          <EngineeringHud />
           <div className="pointer-events-none absolute inset-x-0 top-3 flex justify-center px-3">
             <p className="pointer-events-auto rounded-md border border-border bg-surface/80 px-3 py-1 text-[11px] tracking-wide text-muted uppercase">
               Urban construction demonstrator · procedural scene
@@ -54,6 +66,16 @@ export function ExperienceShell() {
       {openPanel === "usd" ? (
         <ExperienceDrawer title="OpenUSD composition" testId="usd-drawer">
           <OpenUsdExplainer />
+        </ExperienceDrawer>
+      ) : null}
+      {openPanel === "physicsnemo" ? (
+        <ExperienceDrawer title="PhysicsNeMo workflow" testId="physicsnemo-drawer">
+          <PhysicsNemoExplainer />
+        </ExperienceDrawer>
+      ) : null}
+      {openPanel === "earth2" ? (
+        <ExperienceDrawer title="Earth-2 → engineering" testId="earth2-drawer">
+          <Earth2Explainer />
         </ExperienceDrawer>
       ) : null}
     </div>

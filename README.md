@@ -18,21 +18,17 @@ Never claim live NVIDIA inference, live Earth-2 forecasts, in-browser Isaac Sim,
 
 Cada superficie de UI con estado usa solo esas tres etiquetas. Nunca se presenta un resultado precomputado o simulado como inferencia NVIDIA en vivo.
 
-## Phase 2 vs later phases
+## Phase 3 vs later phases
 
-**Phase 2 (this branch):** story + BIM on the Phase 0/1 shell.
+**Phase 3 (this branch):** engineering visualization on the Phase 0–2 shell.
 
-- Landing hero with Enter, Guided Tour, and ecosystem product strip (no 3D on first paint).
-- Mode rail reaches every planned mode without a page reload. Later modes are stubbed, not fully visualized.
-- Guided-tour engine: mode, camera, layers, scripted action, narration, next/back/exit, resume from start.
-- How NVIDIA Fits map: authoring/engineering tools visually separated from the NVIDIA stack, official links, no “replaces Revit”.
-- Demo BIM dataset (≥60 elements, ≥3 disciplines, truthful source labels).
-- BIM inspector, level/discipline isolation, restore all.
-- OpenUSD composition explainer (educational USDA-style UI; the browser scene is procedural Three.js, not a live USD parse).
+- Illustrative structural results (3 load cases, per-element scalars and displacement vectors) with heatmap, legend, deformation scale, and “not a design check” disclaimer.
+- Precomputed wind field (3 speeds × 2 directions) with particles/streamlines, facade pressure, and pedestrian-zone overlay. PhysicsNeMo explainer: solver → training data → surrogate → validated inference. No live inference and no invented speedups.
+- Weather scenarios labeled **WORKFLOW DEMO**, flood time series (≥6 steps, 3 rainfall cases) with water surface, depth legend, and road/building impact. Earth-2 explainer states Earth-2 is **not** the hydraulic flood solver.
 
-**Deferred to Phase 3+:** structural/wind/flood visualization, video AI, logistics playback, robotics animation, reality capture, digital-twin dashboard, copilot, hardening.
+**Deferred to Phase 4+:** video AI, logistics playback, robotics animation, reality capture, digital-twin dashboard, copilot, final tour, hardening.
 
-See `docs/09_DELIVERY_PLAN.md` and `docs/TICKETS.md` (AECN-020 … AECN-033).
+See `docs/09_DELIVERY_PLAN.md` and `docs/TICKETS.md` (AECN-040 … AECN-053).
 
 Official NVIDIA documentation links were last checked on 2026-09-16. See `docs/10_REFERENCES.md`.
 

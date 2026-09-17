@@ -15,6 +15,7 @@
     "check": "astro check",
     "lint": "eslint . && prettier --check .",
     "format": "prettier --write .",
+    "generate:data": "npx tsx scripts/write-bim-dataset.ts && npx tsx scripts/write-engineering-datasets.ts",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:e2e": "playwright test",

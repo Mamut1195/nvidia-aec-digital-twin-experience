@@ -62,7 +62,7 @@ export const ENGINEERING_PRODUCTS: EcosystemProduct[] = [
     aecUse: "Authoritative structural analysis when a validated model and codes require it.",
     complements:
       "Solvers remain authoritative. A digital twin may visualize results; it does not replace the check.",
-    demoShows: "Structural mode is a later-phase illustrative field — not an OpenSees run.",
+    demoShows: "Structural mode shows an illustrative precomputed field — not an OpenSees run.",
     officialUrl: "https://opensees.berkeley.edu/",
     officialLabel: "OpenSees",
   },
@@ -74,7 +74,8 @@ export const ENGINEERING_PRODUCTS: EcosystemProduct[] = [
     aecUse: "Wind, ventilation and other flow studies that produce reference fields.",
     complements:
       "Physics AI surrogates, when used, are trained or validated against trusted solver data.",
-    demoShows: "Wind visualization is a later-phase precomputed field, not a live OpenFOAM solve.",
+    demoShows:
+      "Wind visualization is a precomputed educational field, not a live OpenFOAM solve or PhysicsNeMo inference.",
     officialUrl: "https://www.openfoam.com/",
     officialLabel: "OpenFOAM",
   },
@@ -87,7 +88,7 @@ export const ENGINEERING_PRODUCTS: EcosystemProduct[] = [
     aecUse: "Translate weather and catchment inputs into flood depths and velocities.",
     complements: "Weather AI can inform these workflows; it is not itself the hydraulic solver.",
     demoShows:
-      "Flood mode will be a later-phase precomputed surface. Earth-2 is not the hydraulic solver here.",
+      "Flood mode is a precomputed surface driven by authored weather scenarios. Earth-2 is not the hydraulic solver here.",
     officialUrl: "https://www.hec.usace.army.mil/",
     officialLabel: "HEC",
   },
@@ -134,7 +135,7 @@ export const NVIDIA_PRODUCTS: EcosystemProduct[] = [
     complements:
       "Does not replace OpenFOAM or other trusted solvers. Validation against reference data remains necessary.",
     demoShows:
-      "Wind/Physics AI visualization is a later phase. No live PhysicsNeMo inference runs here.",
+      "Wind mode visualizes a precomputed field and an educational PhysicsNeMo workflow diagram. No live PhysicsNeMo inference runs here.",
     officialUrl: "https://docs.nvidia.com/physicsnemo/latest/overview.html",
     officialLabel: "PhysicsNeMo overview",
   },
@@ -168,7 +169,8 @@ export const NVIDIA_PRODUCTS: EcosystemProduct[] = [
     whatItIs: "A family of open weather and climate AI models, libraries and frameworks.",
     aecUse: "Inform weather-driven engineering workflows that then use hydrology and hydraulics.",
     complements: "Earth-2 is not itself the hydraulic flood solver.",
-    demoShows: "Flood/weather mode is a later-phase workflow demo with authored scenarios.",
+    demoShows:
+      "Flood/weather mode is a workflow demo with authored scenarios and a precomputed flood surface. Earth-2 is not the hydraulic solver.",
     officialUrl: "https://www.nvidia.com/en-us/high-performance-computing/earth-2/",
     officialLabel: "NVIDIA Earth-2",
   },

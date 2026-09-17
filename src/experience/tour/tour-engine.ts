@@ -36,6 +36,9 @@ export function applyScriptedAction(action: TourScriptedAction): void {
     case "close-panel":
       experienceActions.setOpenPanel(null);
       return;
+    case "set-scenario":
+      experienceActions.setScenario(action.patch);
+      return;
     default:
       assertNever(action, "tour scripted action");
   }

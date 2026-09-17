@@ -3,7 +3,7 @@ import { useFrame } from "@react-three/fiber";
 import { useMemo, useRef } from "react";
 import type { Points } from "three";
 
-import { useDisciplineVisible } from "../use-discipline-visible";
+import { useExperienceStore } from "@/experience/state";
 
 import {
   CAMERA_MARKER_POSITIONS,
@@ -15,7 +15,11 @@ import {
 } from "../building-layout";
 import { SCENE_COLORS } from "../colors";
 import { EXCAVATION_PIT_POSITION } from "../coordinates";
+import { FloodOverlay } from "../overlays/FloodOverlay";
+import { StructuralOverlay } from "../overlays/StructuralOverlay";
+import { WindOverlay } from "../overlays/WindOverlay";
 import { useSceneQuality } from "../quality-context";
+import { useDisciplineVisible } from "../use-discipline-visible";
 
 function Worker({ position }: { position: [number, number, number] }) {
   const { shadows } = useSceneQuality();
@@ -165,7 +169,13 @@ export function RobotLayer() {
 }
 
 export function ResultOverlay() {
-  return <group name="ResultOverlay" />;
+  return (
+    <group name="ResultOverlay">
+      <StructuralOverlay />
+      <WindOverlay />
+      <FloodOverlay />
+    </group>
+  );
 }
 
 function unitNoise(seed: number): number {
@@ -174,6 +184,7 @@ function unitNoise(seed: number): number {
 }
 
 export function EffectsGroup() {
+  const mode = useExperienceStore((state) => state.mode);
   const { particles, particleCount } = useSceneQuality();
   const points = useRef<Points>(null);
   const positions = useMemo(() => {
@@ -199,7 +210,13 @@ export function EffectsGroup() {
     attr.needsUpdate = true;
   });
 
-  if (!particles || particleCount === 0) {
+  if (
+    mode === "structure" ||
+    mode === "wind" ||
+    mode === "flood" ||
+    !particles ||
+    particleCount === 0
+  ) {
     return <group name="Effects" />;
   }
 
